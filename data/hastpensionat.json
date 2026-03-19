@@ -1,0 +1,1213 @@
+[
+  {
+    "name": "Lugnets Hästhotell",
+    "category": "hastpensionat",
+    "county": "Skåne län",
+    "city": "Ballingslöv",
+    "phone": "",
+    "website": "",
+    "services": [],
+    "_slug": "lugnets-hasthotel-iccmmrxef",
+    "hours": "",
+    "lat": 56.211386695926734,
+    "lng": 13.86730173617704,
+    "street": "Stoby-Näs 2380",
+    "email": "anders.045161114@telia.com",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stall Cava",
+    "category": "hastpensionat",
+    "county": "Stockholms län",
+    "city": "Brottby",
+    "phone": "",
+    "website": "https://www.stallcava.se/",
+    "services": [
+      "hästpensionat",
+      "konvalescentstall",
+      "inackordering"
+    ],
+    "_slug": "stall-cava-brottby",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Morsta Gård",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stall Alfhem",
+    "category": "hastpensionat",
+    "county": "Västra Götalands län",
+    "city": "Skepplanda",
+    "phone": "070-591 85 18",
+    "website": "https://www.stallalfhem.se/hastpensionat/",
+    "services": [
+      "hästpensionat",
+      "rehabilitering",
+      "ridskola"
+    ],
+    "_slug": "stall-alfhem-skepplanda",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Grönnäs 233, 446 91 Skepplanda",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Hällens Gård",
+    "category": "hastpensionat",
+    "county": "Uppsala län",
+    "city": "Uppsala",
+    "phone": "070-566 12 07",
+    "website": "https://www.hallens-gard.se/",
+    "services": [
+      "konvalescentstall",
+      "hästpensionat",
+      "dressyravel"
+    ],
+    "_slug": "hallens-gard-uppsala",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Hågavägen 410",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "CM Ranch",
+    "category": "hastpensionat",
+    "county": "Västra Götalands län",
+    "city": "Karlsborg",
+    "phone": "070-274 52 73",
+    "website": "https://www.cmranch.se/",
+    "services": [
+      "hästpensionat",
+      "hästhotell",
+      "trailriding"
+    ],
+    "_slug": "cm-ranch-karlsborg",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Uggletorp 2, 546 95 Karlsborg",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Equimari",
+    "category": "hastpensionat",
+    "county": "Skåne län",
+    "city": "Ljungbyhed",
+    "phone": "",
+    "website": "https://www.equimari.com/",
+    "services": [
+      "hästpensionat",
+      "holistisk hästbehandling",
+      "dressyr"
+    ],
+    "_slug": "equimari-ljungbyhed",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stegemans Horse Hotel",
+    "category": "hastpensionat",
+    "county": "Kronobergs län",
+    "city": "Ljungby",
+    "phone": "073-529 06 29",
+    "website": "https://stegemanslantbruk.com/hasthotell/",
+    "services": [
+      "hästhotell",
+      "inackordering"
+    ],
+    "_slug": "stegemans-horse-hotel-ljungby",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Össjö Östergård 1",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stall Danora",
+    "category": "hastpensionat",
+    "county": "Örebro län",
+    "city": "Nora",
+    "phone": "070-543 44 39",
+    "website": "https://www.stalldanora.se/",
+    "services": [
+      "hästpensionat",
+      "utbildning",
+      "konvalescentstall"
+    ],
+    "_slug": "stall-danora-nora",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Nedre Alntorp 208",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stall Rosendahl",
+    "category": "hastpensionat",
+    "county": "Örebro län",
+    "city": "Vintrosa",
+    "phone": "",
+    "website": "https://www.stallrosendahl.se/",
+    "services": [
+      "konvalescentstall",
+      "hästpensionat",
+      "horse hotel"
+    ],
+    "_slug": "stall-rosendahl-vintrosa",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Rosendahl, 710 15 Vintrosa",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Hellmans Hästpensionat",
+    "category": "hastpensionat",
+    "county": "Södermanlands län",
+    "city": "Julita",
+    "phone": "070-662 33 44",
+    "website": "",
+    "services": [
+      "hästpensionat",
+      "ridskola",
+      "lösdrift"
+    ],
+    "_slug": "hellmans-hastpensionat-julita",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Strömkärr 1, 643 96 Julita",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Ponnyfokus",
+    "category": "hastpensionat",
+    "county": "Västra Götalands län",
+    "city": "Tjuvkil",
+    "phone": "",
+    "website": "https://www.ponnyfokus.se/",
+    "services": [
+      "hästpensionat",
+      "konvalescentstall",
+      "lösdrift"
+    ],
+    "_slug": "ponnyfokus-tjuvkil",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stall Lindgården Horsehotel",
+    "category": "hastpensionat",
+    "county": "Skåne län",
+    "city": "Malmö",
+    "phone": "",
+    "website": "https://www.stall-lindgarden.se/",
+    "services": [
+      "hästhotell",
+      "inackordering"
+    ],
+    "_slug": "stall-lindgarden-malmo",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Särslövsvägen 25",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stall Olstorp",
+    "category": "hastpensionat",
+    "county": "Skåne län",
+    "city": "Kvidinge",
+    "phone": "070-290 84 24",
+    "website": "https://stallolstorp.n.nu/",
+    "services": [
+      "lösdrift",
+      "hästpensionat"
+    ],
+    "_slug": "stall-olstorp-kvidinge",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stockholm Hästutveckling",
+    "category": "hastpensionat",
+    "county": "Stockholms län",
+    "city": "Sigtuna",
+    "phone": "070-816 22 44",
+    "website": "https://stockholmhastutveckling.se/",
+    "services": [
+      "konvalescentstall",
+      "hästhotell",
+      "rehabilitering",
+      "lösdrift"
+    ],
+    "_slug": "stockholm-hastutveckling-sigtuna",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Billbyvägen 161 B, 193 91 Sigtuna",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stall Stensunda",
+    "category": "hastpensionat",
+    "county": "Stockholms län",
+    "city": "Sollentuna",
+    "phone": "070-676 34 76",
+    "website": "https://stallstensunda.se/",
+    "services": [
+      "inackordering",
+      "dressyr",
+      "hoppning"
+    ],
+    "_slug": "stall-stensunda-sollentuna",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Skinnaråsvägen 16, 192 75 Sollentuna",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Horses of Steel",
+    "category": "hastpensionat",
+    "county": "Jönköpings län",
+    "city": "Tenhult",
+    "phone": "076-844 42 75",
+    "website": "https://horsesofsteel.se/",
+    "services": [
+      "rehabstall",
+      "hästhotell",
+      "hästmassage"
+    ],
+    "_slug": "horses-of-steel-tenhult",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Älgabäcksryd 8, 561 63 Tenhult",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Kulla Vreta Gård",
+    "category": "hastpensionat",
+    "county": "Stockholms län",
+    "city": "Järfälla",
+    "phone": "070-207 52 84",
+    "website": "http://www.kullavreta.se/",
+    "services": [
+      "hästpensionat",
+      "rehabilitering",
+      "utbildning"
+    ],
+    "_slug": "kulla-vreta-gard-jarfalla",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Gullivervägen 3, 176 77 Järfälla",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stall Högsätter",
+    "category": "hastpensionat",
+    "county": "Södermanlands län",
+    "city": "Björkvik",
+    "phone": "",
+    "website": "http://stallhogsatter.webber.se/",
+    "services": [
+      "hästpensionat",
+      "hästhotell",
+      "helpensionat"
+    ],
+    "_slug": "stall-hogsatter-bjorkvik",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Attusa Gård",
+    "category": "hastpensionat",
+    "county": "Skåne län",
+    "city": "Sankt Olof",
+    "phone": "070-811 36 95",
+    "website": "https://www.attusagard.se/",
+    "services": [
+      "inackordering",
+      "ridskola",
+      "tillridning"
+    ],
+    "_slug": "attusa-gard-sankt-olof",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Attusa 172, 277 45 Sankt Olof",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Svabesholms Kungsgård",
+    "category": "hastpensionat",
+    "county": "Skåne län",
+    "city": "Kivik",
+    "phone": "072-742 41 91",
+    "website": "https://www.svabesholm.se/",
+    "services": [
+      "inackordering",
+      "ridhall",
+      "ridanläggning"
+    ],
+    "_slug": "svabesholms-kungsgard-kivik",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Kungsgårdsvägen 17, 277 35 Kivik",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "GRIM Islandshästar",
+    "category": "hastpensionat",
+    "county": "Stockholms län",
+    "city": "Norrtälje",
+    "phone": "076-851 62 22",
+    "website": "https://www.grimislandshastar.se/",
+    "services": [
+      "inackordering",
+      "ridskola",
+      "ridläger"
+    ],
+    "_slug": "grim-islandshastar-norrtalje",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Västra Hållstavägen 13, 761 72 Norrtälje",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stall Smedby Gård",
+    "category": "hastpensionat",
+    "county": "Östergötlands län",
+    "city": "Norrköping",
+    "phone": "070-546 26 51",
+    "website": "https://stallsmedbygard.se/",
+    "services": [
+      "inackordering",
+      "lösdrift",
+      "hästuthyrning"
+    ],
+    "_slug": "stall-smedby-gard-norrkoping",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Smedby Gård, 605 94 Norrköping",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Mossens Hästgård",
+    "category": "hastpensionat",
+    "county": "Hallands län",
+    "city": "Harplinge",
+    "phone": "",
+    "website": "",
+    "services": [
+      "inackordering",
+      "paddock",
+      "ridbana"
+    ],
+    "_slug": "mossens-hastgard-harplinge",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Mannarp Gamla Mossen 457, Harplinge",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stall Stenshult",
+    "category": "hastpensionat",
+    "county": "Västra Götalands län",
+    "city": "Uddevalla",
+    "phone": "",
+    "website": "https://stallstenshult.se/",
+    "services": [
+      "hästhotell",
+      "hästpensionat",
+      "konvalescentstall"
+    ],
+    "_slug": "stall-stenshult-uddevalla",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Stenshult 481, Uddevalla",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "JL Horse Care",
+    "category": "hastpensionat",
+    "county": "Södermanlands län",
+    "city": "Nyköping",
+    "phone": "",
+    "website": "https://jlhorsecare.se/",
+    "services": [
+      "konvalescentstall",
+      "inackordering",
+      "massage",
+      "akupunktur"
+    ],
+    "_slug": "jl-horse-care-nykoping",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Kulltorp",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stalljonslunds Hästpensionat",
+    "category": "hastpensionat",
+    "county": "Södermanlands län",
+    "city": "Vingåker",
+    "phone": "",
+    "website": "",
+    "services": [
+      "hästpensionat",
+      "inackordering"
+    ],
+    "_slug": "stalljonslunds-hastpensionat-vingaker",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Vellinge Gammelgård Equestrian",
+    "category": "hastpensionat",
+    "county": "Skåne län",
+    "city": "Vellinge",
+    "phone": "070-756 80 35",
+    "website": "https://www.vellingegammelgard.se/",
+    "services": [
+      "inackordering",
+      "ridskola"
+    ],
+    "_slug": "vellinge-gammelgard-equestrian",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "HästRehab by Skönabäck",
+    "category": "hastpensionat",
+    "county": "Skåne län",
+    "city": "Skurup",
+    "phone": "0770-17 53 11",
+    "website": "https://www.hastrehabskonaback.se/",
+    "services": [
+      "rehabilitering",
+      "hästpensionat",
+      "spa",
+      "aqua trainer"
+    ],
+    "_slug": "hastrehab-skonaback-skurup",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Skönabäck 18, 274 91 Skurup",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Gyllebo Farm",
+    "category": "hastpensionat",
+    "county": "Skåne län",
+    "city": "Sankt Olof",
+    "phone": "",
+    "website": "https://www.gyllebofarm.se/",
+    "services": [
+      "lösdrift",
+      "inackordering",
+      "uppfödning"
+    ],
+    "_slug": "gyllebo-farm-sankt-olof",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Östaröd",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Kulltorps Islandshästar",
+    "category": "hastpensionat",
+    "county": "Östergötlands län",
+    "city": "Klockrike",
+    "phone": "073-941 62 16",
+    "website": "https://www.kulltorpsislandshastar.se/",
+    "services": [
+      "inackordering",
+      "ridskola",
+      "utbildning"
+    ],
+    "_slug": "kulltorps-islandshastar-klockrike",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Kulla Kulltorp 1, 591 78 Klockrike",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stenholmen Islandshästcenter",
+    "category": "hastpensionat",
+    "county": "Östergötlands län",
+    "city": "Linköping",
+    "phone": "076-037 00 13",
+    "website": "https://www.stenholmen.nu/",
+    "services": [
+      "inackordering",
+      "ridskola",
+      "turridning",
+      "lösdrift"
+    ],
+    "_slug": "stenholmen-islandshastar-linkoping",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Gerstorp, Linköping",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Olofsbo Islandshästar",
+    "category": "hastpensionat",
+    "county": "Hallands län",
+    "city": "Falkenberg",
+    "phone": "070-336 34 15",
+    "website": "https://www.olofsboislandshastar.se/",
+    "services": [
+      "inackordering",
+      "ridskola",
+      "turridning",
+      "ridläger"
+    ],
+    "_slug": "olofsbo-islandshastar-falkenberg",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Bölse Nilsgård 208, 311 91 Falkenberg",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Rotbrunna Häst & Kursgård",
+    "category": "hastpensionat",
+    "county": "Uppsala län",
+    "city": "Enköping",
+    "phone": "070-296 54 10",
+    "website": "https://www.rotbrunna.se/",
+    "services": [
+      "inackordering",
+      "lösdrift",
+      "kurser"
+    ],
+    "_slug": "rotbrunna-hast-kursgard-enkoping",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Härnevi Rotbrunna 18, Enköping",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Källhagens Gård",
+    "category": "hastpensionat",
+    "county": "Stockholms län",
+    "city": "Haninge",
+    "phone": "070-874 23 85",
+    "website": "https://kallhagensgard.se/",
+    "services": [
+      "lösdrift",
+      "inackordering",
+      "sommarbete"
+    ],
+    "_slug": "kallhagens-gard-haninge",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Hemfosa, Haninge",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stuteri Nådhammar",
+    "category": "hastpensionat",
+    "county": "Södermanlands län",
+    "city": "Mölnbo",
+    "phone": "070-200 97 17",
+    "website": "https://stuterinadhammar.se/",
+    "services": [
+      "inackordering",
+      "lösdrift",
+      "avel",
+      "utbildning"
+    ],
+    "_slug": "stuteri-nadhammar-molnbo",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "153 96 Mölnbo",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stall Fågelbro",
+    "category": "hastpensionat",
+    "county": "Stockholms län",
+    "city": "Värmdö",
+    "phone": "073-616 79 79",
+    "website": "https://stallfagelbro.squarespace.com/",
+    "services": [
+      "inackordering",
+      "ridhus"
+    ],
+    "_slug": "stall-fagelbro-varmdo",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Fågelbro Säteri, 139 60 Värmdö",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stall Siggesta",
+    "category": "hastpensionat",
+    "county": "Stockholms län",
+    "city": "Värmdö",
+    "phone": "070-977 95 15",
+    "website": "https://stallsiggesta.se/",
+    "services": [
+      "inackordering",
+      "ridskola"
+    ],
+    "_slug": "stall-siggesta-varmdo",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Värmdö",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stall Sandös Hagar",
+    "category": "hastpensionat",
+    "county": "Stockholms län",
+    "city": "Värmdö",
+    "phone": "070-826 96 05",
+    "website": "https://stallsando.se/",
+    "services": [
+      "inackordering",
+      "fullservice"
+    ],
+    "_slug": "stall-sandos-hagar-varmdo",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Sandövägen 5, Värmdö",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stora Dalby Gård",
+    "category": "hastpensionat",
+    "county": "Stockholms län",
+    "city": "Ekerö",
+    "phone": "070-440 40 43",
+    "website": "",
+    "services": [
+      "inackordering",
+      "lösdrift",
+      "dressyr",
+      "hoppning"
+    ],
+    "_slug": "stora-dalby-gard-ekero",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Dalby stora dalby 1, 178 92 Ekerö",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Bästhästen i Sverige",
+    "category": "hastpensionat",
+    "county": "Stockholms län",
+    "city": "Tullinge",
+    "phone": "070-768 70 84",
+    "website": "https://www.basthasten.se/",
+    "services": [
+      "inackordering",
+      "lösdrift",
+      "boxplats"
+    ],
+    "_slug": "basthasten-tullinge",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Källtorp 1, 146 33 Tullinge",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Stall Team Nytorp",
+    "category": "hastpensionat",
+    "county": "Stockholms län",
+    "city": "Ekerö",
+    "phone": "08-560 204 82",
+    "website": "http://teamnytorp.se/",
+    "services": [
+      "inackordering"
+    ],
+    "_slug": "stall-team-nytorp-ekero",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Nytorp 1, Ekerö",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Hoppets Gård - Stora Stallet",
+    "category": "hastpensionat",
+    "county": "Stockholms län",
+    "city": "Västerhaninge",
+    "phone": "",
+    "website": "",
+    "services": [
+      "inackordering",
+      "ridbana"
+    ],
+    "_slug": "hoppets-gard-stora-stallet-vasterhaninge",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Västerhaninge",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Hälltorp Gård",
+    "category": "hastpensionat",
+    "county": "Stockholms län",
+    "city": "Nykvarn",
+    "phone": "",
+    "website": "https://www.halltorpgard.com/",
+    "services": [
+      "lösdrift",
+      "inackordering",
+      "unghästar"
+    ],
+    "_slug": "halltorp-gard-nykvarn",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Taxinge, Nykvarn",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Lilla Botarby Gård",
+    "category": "hastpensionat",
+    "county": "Uppsala län",
+    "city": "Skyttorp",
+    "phone": "018-35 30 60",
+    "website": "https://lillabotarbygard.se/",
+    "services": [
+      "inackordering",
+      "bete",
+      "dressyr"
+    ],
+    "_slug": "lilla-botarby-gard-skyttorp",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Skyttorp, Uppsala",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Kullabergs Islandshästar",
+    "category": "hastpensionat",
+    "county": "Skåne län",
+    "city": "Mölle",
+    "phone": "070-627 71 65",
+    "website": "https://kullabergsislandshastar.com/",
+    "services": [
+      "inackordering",
+      "turridning",
+      "ridskola"
+    ],
+    "_slug": "kullabergs-islandshastar-molle",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Himmelstorpsvägen 48-7, 263 77 Mölle",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Ekastiga Gård",
+    "category": "hastpensionat",
+    "county": "Skåne län",
+    "city": "Höör",
+    "phone": "073-802 42 88",
+    "website": "https://ekastiga.com/",
+    "services": [
+      "inackordering",
+      "lösdrift",
+      "gårdsbutik"
+    ],
+    "_slug": "ekastiga-gard-hoor",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Ekastiga 333, 243 93 Höör",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Bellinga Hästcenter",
+    "category": "hastpensionat",
+    "county": "Skåne län",
+    "city": "Blentarp",
+    "phone": "",
+    "website": "",
+    "services": [
+      "hästpensionat",
+      "pensionärshästar"
+    ],
+    "_slug": "bellinga-hastcenter-blentarp",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Blentarp",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Kärra Gård (Staffanstorp)",
+    "category": "hastpensionat",
+    "county": "Skåne län",
+    "city": "Staffanstorp",
+    "phone": "",
+    "website": "https://karragard.n.nu/",
+    "services": [
+      "inackordering"
+    ],
+    "_slug": "karra-gard-staffanstorp",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Kärra Gård (Lödöse)",
+    "category": "hastpensionat",
+    "county": "Västra Götalands län",
+    "city": "Lödöse",
+    "phone": "",
+    "website": "",
+    "services": [
+      "inackordering"
+    ],
+    "_slug": "karra-gard-lodose",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Lödöse, Lilla Edets kommun",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Säva Ridcenter",
+    "category": "hastpensionat",
+    "county": "Uppsala län",
+    "city": "Örsundsbro",
+    "phone": "073-678 90 74",
+    "website": "https://savaridcenter.se/",
+    "services": [
+      "inackordering",
+      "ridskola",
+      "ridläger"
+    ],
+    "_slug": "sava-ridcenter-orsundsbro",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Gryta-Säva Gård 27, 749 63 Örsundsbro",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Slofallets Islandshästar",
+    "category": "hastpensionat",
+    "county": "Örebro län",
+    "city": "Bergslagen",
+    "phone": "070-232 55 23",
+    "website": "https://www.slofalletsislandshastar.se/",
+    "services": [
+      "lösdrift",
+      "boxplats",
+      "ridskola",
+      "hovslageri"
+    ],
+    "_slug": "slofallets-islandshastar-bergslagen",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Södertörns Islandshästar",
+    "category": "hastpensionat",
+    "county": "Stockholms län",
+    "city": "Grödinge",
+    "phone": "08-530 265 38",
+    "website": "https://www.sodertornsislandshastar.se/",
+    "services": [
+      "inackordering",
+      "ridskola"
+    ],
+    "_slug": "sodertorns-islandshastar-grodinge",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Näs by Pl 2295, 147 92 Grödinge",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Sör Sellnäs Islandshästar",
+    "category": "hastpensionat",
+    "county": "Dalarnas län",
+    "city": "Borlänge",
+    "phone": "070-360 81 19",
+    "website": "https://sorsellnas-islandshastar.se/",
+    "services": [
+      "inackordering",
+      "turridning",
+      "ridläger"
+    ],
+    "_slug": "sor-sellnas-islandshastar-borlange",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Lerbäcken 55, Borlänge",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Hälsogårdens Ridcenter",
+    "category": "hastpensionat",
+    "county": "Kalmar län",
+    "city": "Mörbylånga",
+    "phone": "070-267 85 41",
+    "website": "https://halsogardenoland.se/",
+    "services": [
+      "inackordering",
+      "ridskola",
+      "turridning",
+      "konvalescentstall"
+    ],
+    "_slug": "halsogardens-ridcenter-morbylanga",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Risinge 402, 386 61 Mörbylånga",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Häringe Stall",
+    "category": "hastpensionat",
+    "county": "Stockholms län",
+    "city": "Haninge",
+    "phone": "072-015 39 21",
+    "website": "",
+    "services": [
+      "inackordering",
+      "ridhus",
+      "sommarbete"
+    ],
+    "_slug": "haringe-stall-haninge",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Haninge",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Optimal Hästhälsa - Berga Gård",
+    "category": "hastpensionat",
+    "county": "Västra Götalands län",
+    "city": "Gällstad",
+    "phone": "",
+    "website": "https://www.optimalhasthalsa.com/",
+    "services": [
+      "hästrehabilitering",
+      "hästpensionat",
+      "massage",
+      "akupunktur"
+    ],
+    "_slug": "optimal-hasthalsa-berga-gard-gallstad",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Berga Gård, Gällstad",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Skaftö Ridklubb",
+    "category": "hastpensionat",
+    "county": "Västra Götalands län",
+    "city": "Lysekil",
+    "phone": "",
+    "website": "https://skaftoridklubb.se/",
+    "services": [
+      "inackordering",
+      "ridskola"
+    ],
+    "_slug": "skafto-ridklubb-lysekil",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Skaftö, Lysekils kommun",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Långeberga Ridklubb",
+    "category": "hastpensionat",
+    "county": "Västra Götalands län",
+    "city": "Västra Frölunda",
+    "phone": "",
+    "website": "https://www.langebergark.se/",
+    "services": [
+      "inackordering",
+      "ridskola"
+    ],
+    "_slug": "langeberga-ridklubb-vastra-frolunda",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "Västra Frölunda, Göteborg",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Lugnets Hästhotel",
+    "category": "hastpensionat",
+    "county": "Skåne län",
+    "city": "Ballingslöv",
+    "phone": "",
+    "website": "",
+    "services": [],
+    "_slug": "lugnets-hasthotel-iccmmrxef",
+    "hours": "",
+    "lat": 56.211386695926734,
+    "lng": 13.86730173617704,
+    "street": "Stoby-Näs 2380",
+    "email": "anders.045161114@telia.com",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Storkyrkobadet",
+    "category": "hastpensionat",
+    "county": "Stockholms län",
+    "city": "Stockholm",
+    "phone": "",
+    "website": "",
+    "services": [],
+    "_slug": "storkyrkobadet-mtfkmovyz",
+    "hours": "",
+    "lat": 59.32353883475431,
+    "lng": 18.072688173306208,
+    "street": "Tyska Stallplan 2",
+    "email": "jennie.kagstrom@stockholm.se",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Goava Sales Intelligence AB",
+    "category": "hastpensionat",
+    "county": "Stockholms län",
+    "city": "Stockholm",
+    "phone": "",
+    "website": "http://www.goava.com",
+    "services": [],
+    "_slug": "goava-sales-intelligence-ab-icopxagpq",
+    "hours": "",
+    "lat": 59.32322154276582,
+    "lng": 18.07286031340168,
+    "street": "Tyska Stallplan 1",
+    "email": "",
+    "source": "hitta.se"
+  },
+  {
+    "name": "Ställplats Stockholm - First Camp",
+    "category": "hastpensionat",
+    "county": "",
+    "city": "Skarpnäck",
+    "phone": "0771-101 200",
+    "website": "http://www.firstcamp.se",
+    "services": [],
+    "_slug": "stallplats-stockholm-first-camp-mtdlquyef",
+    "hours": "",
+    "lat": null,
+    "lng": null,
+    "street": "flaten skogsväg 30",
+    "email": "dennis.troell@nordiccamping.se",
+    "source": "hitta.se"
+  }
+]

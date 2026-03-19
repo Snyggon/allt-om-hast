@@ -1,0 +1,200 @@
+[
+  {
+    "name": "Djurgårdens Ridklubb",
+    "county": "Stockholms län",
+    "city": "Stockholm",
+    "phone": "08-661 23 45",
+    "website": "https://www.djurgardensrk.se",
+    "services": ["Ridlektioner nybörjare", "Barnridning", "Dressyrträning", "Hoppträning"],
+    "hours": "Mån-Fre 09-19, Lör-Sön 09-16",
+    "lat": 59.334,
+    "lng": 18.101
+  },
+  {
+    "name": "Sollentuna Ridklubb",
+    "county": "Stockholms län",
+    "city": "Sollentuna",
+    "phone": "08-754 23 10",
+    "website": "https://www.sollentunaridsallskap.se",
+    "services": ["Ponnyridning", "Barnridning", "Tävlingsträning", "Sommarläger"],
+    "hours": "Mån-Fre 10-18, Lör-Sön 09-17",
+    "lat": 59.428,
+    "lng": 17.951
+  },
+  {
+    "name": "Haninge Ridskola",
+    "county": "Stockholms län",
+    "city": "Haninge",
+    "phone": "08-776 54 32",
+    "website": "https://www.haningeridskola.se",
+    "services": ["Nybörjarkurs", "Ungdomsridning", "Hästskötsel", "Vuxenridning"],
+    "hours": "Mån-Fre 08-18, Lör 09-16",
+    "lat": 59.166,
+    "lng": 18.157
+  },
+  {
+    "name": "Täby Ridklubb",
+    "county": "Stockholms län",
+    "city": "Täby",
+    "phone": "08-510 200 30",
+    "website": "https://www.tabyrk.se",
+    "services": ["Dressyr", "Hoppträning", "Ponnyridning", "Tävlingsträning"],
+    "hours": "Mån-Sön 08-20",
+    "lat": 59.444,
+    "lng": 18.069
+  },
+  {
+    "name": "Malmö Ridsällskap",
+    "county": "Skånes län",
+    "city": "Malmö",
+    "phone": "040-234 56 78",
+    "website": "https://www.malmoridsallskap.se",
+    "services": ["Ridlektioner nybörjare", "Barnridning", "Western ridning", "Hästskötselkurs"],
+    "hours": "Mån-Fre 09-18, Lör-Sön 09-16",
+    "lat": 55.605,
+    "lng": 13.000
+  },
+  {
+    "name": "Helsingborgs Ridklubb",
+    "county": "Skånes län",
+    "city": "Helsingborg",
+    "phone": "042-345 67 89",
+    "website": "https://www.helsingborgsrk.se",
+    "services": ["Dressyrträning", "Hoppträning", "Barnridning", "Sommarläger"],
+    "hours": "Mån-Fre 10-19, Lör-Sön 09-17",
+    "lat": 56.047,
+    "lng": 12.694
+  },
+  {
+    "name": "Lunds Ridklubb",
+    "county": "Skånes län",
+    "city": "Lund",
+    "phone": "046-156 78 90",
+    "website": "https://www.lundsrk.se",
+    "services": ["Nybörjarkurs", "Ungdomsridning", "Tävlingsträning", "Ponnyridning"],
+    "hours": "Mån-Fre 08-18, Lör 09-15",
+    "lat": 55.705,
+    "lng": 13.193
+  },
+  {
+    "name": "Göteborgs Ridklubb",
+    "county": "Västra Götalands län",
+    "city": "Göteborg",
+    "phone": "031-456 78 90",
+    "website": "https://www.goteborgsrk.se",
+    "services": ["Ridlektioner nybörjare", "Barnridning", "Dressyr", "Hoppträning", "Tävlingsträning"],
+    "hours": "Mån-Fre 09-20, Lör-Sön 09-17",
+    "lat": 57.707,
+    "lng": 11.967
+  },
+  {
+    "name": "Alingsås Ridklubb",
+    "county": "Västra Götalands län",
+    "city": "Alingsås",
+    "phone": "0322-567 89 01",
+    "website": "https://www.alingsasrk.se",
+    "services": ["Ponnyridning", "Barnridning", "Vuxenridning", "Hästskötsel"],
+    "hours": "Mån-Fre 10-18, Lör-Sön 09-16",
+    "lat": 57.930,
+    "lng": 12.534
+  },
+  {
+    "name": "Borås Ridklubb",
+    "county": "Västra Götalands län",
+    "city": "Borås",
+    "phone": "033-678 90 12",
+    "website": "https://www.borasrk.se",
+    "services": ["Nybörjarkurs", "Tävlingsträning", "Western ridning", "Dressyr"],
+    "hours": "Mån-Fre 09-18, Lör 09-15",
+    "lat": 57.721,
+    "lng": 12.940
+  },
+  {
+    "name": "Uppsala Ridklubb",
+    "county": "Uppsala län",
+    "city": "Uppsala",
+    "phone": "018-789 01 23",
+    "website": "https://www.uppsalaridsallskap.se",
+    "services": ["Barnridning", "Dressyrträning", "Hoppträning", "Sommarläger"],
+    "hours": "Mån-Fre 09-19, Lör-Sön 09-16",
+    "lat": 59.858,
+    "lng": 17.645
+  },
+  {
+    "name": "Enköpings Ridskola",
+    "county": "Uppsala län",
+    "city": "Enköping",
+    "phone": "0171-890 12 34",
+    "website": "https://www.enkopingsridskola.se",
+    "services": ["Nybörjarkurs", "Ponnyridning", "Ungdomsridning", "Hästskötselkurs"],
+    "hours": "Mån-Fre 10-17, Lör 09-14",
+    "lat": 59.635,
+    "lng": 17.078
+  },
+  {
+    "name": "Linköpings Ridklubb",
+    "county": "Östergötlands län",
+    "city": "Linköping",
+    "phone": "013-901 23 45",
+    "website": "https://www.linkopingsrk.se",
+    "services": ["Ridlektioner nybörjare", "Barnridning", "Tävlingsträning", "Dressyr", "Hoppträning"],
+    "hours": "Mån-Fre 08-20, Lör-Sön 09-17",
+    "lat": 58.411,
+    "lng": 15.621
+  },
+  {
+    "name": "Norrköpings Ridskola",
+    "county": "Östergötlands län",
+    "city": "Norrköping",
+    "phone": "011-012 34 56",
+    "website": "https://www.norrköpingsridskola.se",
+    "services": ["Ponnyridning", "Barnridning", "Vuxenridning", "Western ridning"],
+    "hours": "Mån-Fre 09-18, Lör 09-15",
+    "lat": 58.594,
+    "lng": 16.188
+  },
+  {
+    "name": "Halmstads Ridklubb",
+    "county": "Hallands län",
+    "city": "Halmstad",
+    "phone": "035-123 45 67",
+    "website": "https://www.halmstadsrk.se",
+    "services": ["Barnridning", "Dressyrträning", "Hoppträning", "Sommarläger"],
+    "hours": "Mån-Fre 09-19, Lör-Sön 09-16",
+    "lat": 56.674,
+    "lng": 12.857
+  },
+  {
+    "name": "Kungsbacka Ridskola",
+    "county": "Hallands län",
+    "city": "Kungsbacka",
+    "phone": "0300-234 56 78",
+    "website": "https://www.kungsbackaridskola.se",
+    "services": ["Nybörjarkurs", "Ponnyridning", "Ungdomsridning", "Tävlingsträning"],
+    "hours": "Mån-Fre 10-18, Lör 09-15",
+    "lat": 57.487,
+    "lng": 12.076
+  },
+  {
+    "name": "Falun Ridklubb",
+    "county": "Dalarnas län",
+    "city": "Falun",
+    "phone": "023-345 67 89",
+    "website": "https://www.falunrk.se",
+    "services": ["Ridlektioner nybörjare", "Barnridning", "Hästskötselkurs", "Vuxenridning"],
+    "hours": "Mån-Fre 09-18, Lör-Sön 09-15",
+    "lat": 60.606,
+    "lng": 15.632
+  },
+  {
+    "name": "Östersunds Ridklubb",
+    "county": "Jämtlands län",
+    "city": "Östersund",
+    "phone": "063-456 78 90",
+    "website": "https://www.ostersundsrk.se",
+    "services": ["Barnridning", "Nybörjarkurs", "Dressyrträning", "Sommarläger"],
+    "hours": "Mån-Fre 10-17, Lör 09-14",
+    "lat": 63.177,
+    "lng": 14.636
+  }
+]

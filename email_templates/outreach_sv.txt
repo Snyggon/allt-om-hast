@@ -1,0 +1,24 @@
+Ämne: Vi listar {{NAMN}} gratis på Ridskolor-i-Sverige.se
+
+Hej {{NAMN}},
+
+Jag hittade er ridskola i {{LÄN}} och ville berätta om en ny kostnadsfri tjänst för svenska ridskolor.
+
+Vi har lanserat Ridskolor-i-Sverige.se – en komplett katalog över ridskolor i hela Sverige. Vi hjälper ryttare och föräldrar att hitta ridskolor nära dem via vår sökfunktion och interaktiva karta.
+
+Er ridskola finns redan med i vår katalog:
+{{LISTING_URL}}
+
+Vi erbjuder kostnadsfritt:
+✓ Listning med namn, adress, telefon och webbplats
+✓ Synlighet i alla 21 svenska län
+✓ SEO-optimerad presentation för sökmotorer
+
+Om ni vill uppdatera er information (öppettider, tjänster, bilder) eller om ni har frågor är det bara att svara på detta mail.
+
+Med vänliga hälsningar,
+Ridskolor-i-Sverige.se
+{{SITE_URL}}
+
+---
+För att avregistrera dig, svara med "Avregistrera" i ämnesraden.

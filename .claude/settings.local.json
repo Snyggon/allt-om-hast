@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.ridsport.se)",
+      "WebFetch(domain:www.hitta.se)",
+      "WebFetch(domain:www.allabolag.se)",
+      "WebFetch(domain:www.eniro.se)",
+      "WebFetch(domain:www.gulasidorna.se)",
+      "WebFetch(domain:ridsport.se)",
+      "WebFetch(domain:www.118100.se)",
+      "WebFetch(domain:www.idrottonline.se)"
+    ]
+  }
+}

@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Säljlista — Ridskolor utan hemsida</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background:#F8F4F6; color:#2A1820; margin:0; padding:2rem; }
+    h1 { color:#8B3A52; margin-bottom:0.25rem; }
+    .meta { color:#9E8090; font-size:0.9rem; margin-bottom:2rem; }
+    .stats { display:flex; gap:2rem; margin-bottom:2rem; }
+    .stat { background:white; border-radius:12px; padding:1rem 1.5rem; box-shadow:0 2px 8px rgba(160,60,90,0.1); }
+    .stat strong { font-size:1.8rem; color:#C4607A; display:block; }
+    .stat span { font-size:0.82rem; color:#9E8090; }
+    table { width:100%; border-collapse:collapse; background:white; border-radius:12px; overflow:hidden; box-shadow:0 2px 8px rgba(160,60,90,0.1); }
+    th { background:linear-gradient(135deg,#8B3A52,#C4607A); color:white; text-align:left; padding:0.75rem 1rem; font-size:0.85rem; }
+    td { padding:0.7rem 1rem; border-bottom:1px solid #EDD8E0; font-size:0.9rem; }
+    tr:last-child td { border-bottom:none; }
+    tr:hover td { background:#FDF0F3; }
+    .num { color:#9E8090; font-size:0.8rem; }
+    a { color:#C4607A; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .status-badge { display:inline-block; padding:0.2rem 0.65rem; border-radius:50px; font-size:0.75rem; font-weight:600; }
+    .status-new { background:#FDF0F3; color:#8B3A52; }
+    .status-contacted { background:#EBF5EE; color:#2E5240; }
+    .status-sold { background:#FFF8E7; color:#7A5C00; }
+    .filter-row { margin-bottom:1rem; display:flex; gap:1rem; align-items:center; flex-wrap:wrap; }
+    input[type=text] { padding:0.5rem 0.9rem; border:1.5px solid #EDD8E0; border-radius:8px; font-size:0.9rem; width:280px; }
+    input[type=text]:focus { outline:none; border-color:#C4607A; }
+    .pitch-box { background:white; border-radius:12px; padding:1.5rem 2rem; box-shadow:0 2px 8px rgba(160,60,90,0.1); margin-bottom:2rem; }
+    .pitch-box h2 { color:#8B3A52; font-size:1.1rem; margin-bottom:0.75rem; }
+    pre { background:#FDF0F3; border-radius:8px; padding:1rem; font-size:0.85rem; white-space:pre-wrap; line-height:1.6; color:#2A1820; }
+  </style>
+</head>
+<body>
+
+<h1>Säljlista — Ridskolor utan hemsida</h1>
+<p class="meta">Genererad: 2026-03-15 &bull; Ridskolor-i-Sverige.se</p>
+
+<div class="stats">
+  <div class="stat">
+    <strong>155</strong>
+    <span>Potentiella kunder (har telefon)</span>
+  </div>
+  <div class="stat">
+    <strong>479</strong>
+    <span>Totalt i katalogen</span>
+  </div>
+  <div class="stat">
+    <strong>2 500 kr</strong>
+    <span>Enkel hemsida (startpris)</span>
+  </div>
+</div>
+
+<div class="pitch-box">
+  <h2>📞 Telefon-pitch (ca 30 sek)</h2>
+  <pre>"Hej, mitt namn är [NAMN] och jag ringer från Ridskolor-i-Sverige.se.
+Vi har [RIDSKOLANS NAMN] listad i vår katalog — ni syns på Google
+när folk söker ridskola i [STAD]. Jag ringde för att fråga om ni
+är intresserade av en egen hemsida? Vi bygger enkla och snygga
+ridskole-hemsidor för 2 500 kronor. Kan jag skicka er ett par exempel
+och en offert?" </pre>
+</div>
+
+<div class="pitch-box">
+  <h2>📧 E-post-mall</h2>
+  <pre>Ämne: Er ridskola syns på Google — vill ni ha en hemsida?
+
+Hej [NAMN],
+
+Vi driver Ridskolor-i-Sverige.se — Sveriges mest kompletta katalog
+med 480+ ridskolor. [RIDSKOLANS NAMN] finns redan listad hos oss
+och visas när folk söker ridskola i [STAD/LÄN] på Google.
+
+Vi märker att ni inte har en egen hemsida och erbjuder just nu
+att bygga en snygg och mobilanpassad ridskole-hemsida för:
+
+  🐴 Enkel landningssida: 2 500 kr (engång)
+  🌐 Komplett 3-5 sidor: 5 000 kr (engång)
+  📅 Löpande underhåll: 195 kr/mån
+
+Hemsidan inkluderar: presentation, lektioner, priser,
+kontaktformulär och karta. Vi kopplar den även till er kataloglista.
+
+Svarar du på det här mejlet kan vi skicka ett par exempel och sätta
+upp ett kostnadsfritt möte.
+
+Med vänliga hälsningar,
+[DITT NAMN]
+Ridskolor-i-Sverige.se</pre>
+</div>
+
+<div class="filter-row">
+  <input type="text" id="search-filter" placeholder="Filtrera på namn, stad, telefon...">
+  <span id="visible-count" style="color:#9E8090;font-size:0.88rem;">155 visas</span>
+</div>
+
+<table id="pitch-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Ridskola</th>
+      <th>Län</th>
+      <th>Stad</th>
+      <th>Telefon</th>
+      <th>E-post</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+        <tr>
+          <td class="num">1</td>
+          <td><strong>Järpens Ridklubb</strong></td>
+          <td></td>
+          <td></td>
+          <td><a href="tel:0647-61 18 00">0647-61 18 00</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">2</td>
+          <td><strong>Laxå Ridklubb</strong></td>
+          <td></td>
+          <td></td>
+          <td><a href="tel:0584-106 66">0584-106 66</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">3</td>
+          <td><strong>Lits Ryttarklubb</strong></td>
+          <td></td>
+          <td></td>
+          <td><a href="tel:0642-500 50">0642-500 50</a></td>
+          <td>anna.chu@aveqia.com</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">4</td>
+          <td><strong>Malmö Ridklubb Av År 1920</strong></td>
+          <td></td>
+          <td></td>
+          <td><a href="tel:040-15 69 01">040-15 69 01</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">5</td>
+          <td><strong>Melleruds Ridklubb</strong></td>
+          <td></td>
+          <td></td>
+          <td><a href="tel:0530-410 00">0530-410 00</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">6</td>
+          <td><strong>Perstorps Ridklubb</strong></td>
+          <td></td>
+          <td></td>
+          <td><a href="tel:0435-305 81">0435-305 81</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">7</td>
+          <td><strong>Rocklunda Ridskola AB</strong></td>
+          <td></td>
+          <td></td>
+          <td><a href="tel:021-18 88 83">021-18 88 83</a></td>
+          <td>info@ljusagard.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">8</td>
+          <td><strong>Roo Gård Ryttarklubb</strong></td>
+          <td></td>
+          <td></td>
+          <td><a href="tel:08-543 531 35">08-543 531 35</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">9</td>
+          <td><strong>Strömstads Ridklubb</strong></td>
+          <td></td>
+          <td></td>
+          <td><a href="tel:0526-136 70">0526-136 70</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">10</td>
+          <td><strong>Västerhaninge Ridskola Blåkulla Handelsbolag</strong></td>
+          <td></td>
+          <td></td>
+          <td><a href="tel:070-564 69 56">070-564 69 56</a></td>
+          <td>lotta.bluehill@telia.com</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">11</td>
+          <td><strong>Årekärrs Ridklubb</strong></td>
+          <td></td>
+          <td></td>
+          <td><a href="tel:031-91 42 72">031-91 42 72</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">12</td>
+          <td><strong>Östadkulle Ridskola</strong></td>
+          <td></td>
+          <td>Alingsås</td>
+          <td><a href="tel:0322-63 54 66">0322-63 54 66</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">13</td>
+          <td><strong>Storås Ridklubb</strong></td>
+          <td></td>
+          <td>Angered</td>
+          <td><a href="tel:031-330 12 71">031-330 12 71</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">14</td>
+          <td><strong>Bankeryds Ridklubb</strong></td>
+          <td></td>
+          <td>Bankeryd</td>
+          <td><a href="tel:036-37 91 53">036-37 91 53</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">15</td>
+          <td><strong>Forsbacka Ryttargård HB</strong></td>
+          <td></td>
+          <td>Borlänge</td>
+          <td><a href="tel:0243-23 39 76">0243-23 39 76</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">16</td>
+          <td><strong>Amatörryttarklubben</strong></td>
+          <td></td>
+          <td>Bromma</td>
+          <td><a href="tel:0220-436 83">0220-436 83</a></td>
+          <td>info@agestaridskola.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">17</td>
+          <td><strong>Kakas Ridklubb</strong></td>
+          <td></td>
+          <td>Brämhult</td>
+          <td><a href="tel:033-24 13 64">033-24 13 64</a></td>
+          <td>info@agestaridskola.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">18</td>
+          <td><strong>Ekeby Ridklubb</strong></td>
+          <td></td>
+          <td>Djursholm</td>
+          <td><a href="tel:08-753 13 59">08-753 13 59</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">19</td>
+          <td><strong>Dorotea Ridklubb /drk/</strong></td>
+          <td></td>
+          <td>Dorotea</td>
+          <td><a href="tel:0942-210 68">0942-210 68</a></td>
+          <td>info@agestaridskola.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">20</td>
+          <td><strong>Fagersta Ryttarklubb</strong></td>
+          <td></td>
+          <td>Fagersta</td>
+          <td><a href="tel:0223-541 40">0223-541 40</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">21</td>
+          <td><strong>Farsta Ridskola AB</strong></td>
+          <td></td>
+          <td>Farsta</td>
+          <td><a href="tel:08-604 22 40">08-604 22 40</a></td>
+          <td>claudia@farstaridskola.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">22</td>
+          <td><strong>Filipstads Ridklubb</strong></td>
+          <td></td>
+          <td>Filipstad</td>
+          <td><a href="tel:0590-106 80">0590-106 80</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">23</td>
+          <td><strong>Mellanbygdens Ryttarförening</strong></td>
+          <td></td>
+          <td>Flarken</td>
+          <td><a href="tel:0934-213 76">0934-213 76</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">24</td>
+          <td><strong>Flyinge Ryttarförening</strong></td>
+          <td></td>
+          <td>Flyinge</td>
+          <td><a href="tel:046-513 30">046-513 30</a></td>
+          <td>info@agestaridskola.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">25</td>
+          <td><strong>Östersund-Frösö Ridklubb</strong></td>
+          <td></td>
+          <td>Frösön</td>
+          <td><a href="tel:063-10 33 77">063-10 33 77</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">26</td>
+          <td><strong>Grums Ridklubb</strong></td>
+          <td></td>
+          <td>Grums</td>
+          <td><a href="tel:0555-614 77">0555-614 77</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">27</td>
+          <td><strong>Ölmstad Rid och Körsällskap</strong></td>
+          <td></td>
+          <td>Gränna</td>
+          <td><a href="tel:079-303 25 30">079-303 25 30</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">28</td>
+          <td><strong>Sudergutarnas Ridhusförening</strong></td>
+          <td></td>
+          <td>Havdhem</td>
+          <td><a href="tel:0498-48 13 03">0498-48 13 03</a></td>
+          <td>info@agestaridskola.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">29</td>
+          <td><strong>Annelis Ridcenter</strong></td>
+          <td></td>
+          <td>Hestra</td>
+          <td><a href="tel:0370-33 70 39">0370-33 70 39</a></td>
+          <td>anna.chu@aveqia.com</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">30</td>
+          <td><strong>Hofors Ridsällskap</strong></td>
+          <td></td>
+          <td>Hofors</td>
+          <td><a href="tel:0290-248 27">0290-248 27</a></td>
+          <td>info@agestaridskola.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">31</td>
+          <td><strong>Sundby Ridskola AB</strong></td>
+          <td></td>
+          <td>Huddinge</td>
+          <td><a href="tel:08-746 92 75">08-746 92 75</a></td>
+          <td>info@sundbyridskola.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">32</td>
+          <td><strong>Hölö Ridskola & Sadelmakeri Kommanditbolag</strong></td>
+          <td></td>
+          <td>Hölö</td>
+          <td><a href="tel:08-551 542 10">08-551 542 10</a></td>
+          <td>marika@yogama.nu</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">33</td>
+          <td><strong>Rosenholms Ridklubb</strong></td>
+          <td></td>
+          <td>Karlskrona</td>
+          <td><a href="tel:0455-190 90">0455-190 90</a></td>
+          <td>info@agestaridskola.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">34</td>
+          <td><strong>Rudskogens Ryttarförening</strong></td>
+          <td></td>
+          <td>Karlstad</td>
+          <td><a href="tel:054-87 38 11">054-87 38 11</a></td>
+          <td>info@agestaridskola.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">35</td>
+          <td><strong>Kinda Ridklubb</strong></td>
+          <td></td>
+          <td>Kisa</td>
+          <td><a href="tel:0494-430 84">0494-430 84</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">36</td>
+          <td><strong>Valsängs Dressyrstall</strong></td>
+          <td></td>
+          <td>Klövedal</td>
+          <td><a href="tel:0304-66 35 15">0304-66 35 15</a></td>
+          <td>marika@yogama.nu</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">37</td>
+          <td><strong>Sundsvalls Lantliga Ryttarförening</strong></td>
+          <td></td>
+          <td>Kovland</td>
+          <td><a href="tel:060-914 42">060-914 42</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">38</td>
+          <td><strong>Lennartsnäs säteri</strong></td>
+          <td></td>
+          <td>Kungsängen</td>
+          <td><a href="tel:08-581 666 90">08-581 666 90</a></td>
+          <td>hans.aberg@lennartsnas.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">39</td>
+          <td><strong>Lammhults Ridklubb</strong></td>
+          <td></td>
+          <td>Lammhult</td>
+          <td><a href="tel:0472-750 44">0472-750 44</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">40</td>
+          <td><strong>Landskrona Ridklubb</strong></td>
+          <td></td>
+          <td>Landskrona</td>
+          <td><a href="tel:0418-139 37">0418-139 37</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">41</td>
+          <td><strong>Svarttorps Ridsällskap</strong></td>
+          <td></td>
+          <td>Lekeryd</td>
+          <td><a href="tel:036-811 04">036-811 04</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">42</td>
+          <td><strong>Leksands Ridklubb</strong></td>
+          <td></td>
+          <td>Leksand</td>
+          <td><a href="tel:0247-212 56">0247-212 56</a></td>
+          <td>info@leksandsrk.org</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">43</td>
+          <td><strong>Föreningen Linde Ridskola</strong></td>
+          <td></td>
+          <td>Lindesberg</td>
+          <td><a href="tel:0581-122 45">0581-122 45</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">44</td>
+          <td><strong>Karlskrona Kommun - Stallet</strong></td>
+          <td></td>
+          <td>Lyckeby</td>
+          <td><a href="tel:0455-30 30 00">0455-30 30 00</a></td>
+          <td>susanne.strom@blekingemuseum.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">45</td>
+          <td><strong>Länghems Ridklubb</strong></td>
+          <td></td>
+          <td>Länghem</td>
+          <td><a href="tel:0325-402 00">0325-402 00</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">46</td>
+          <td><strong>Stall Killigrew</strong></td>
+          <td></td>
+          <td>Matfors</td>
+          <td><a href="tel:070-664 17 17">070-664 17 17</a></td>
+          <td>info@killigrew.com</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">47</td>
+          <td><strong>Mora Ridklubb av År 2000</strong></td>
+          <td></td>
+          <td>Mora</td>
+          <td><a href="tel:0250-170 20">0250-170 20</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">48</td>
+          <td><strong>Ridskolekonsulent Skårelid Marita</strong></td>
+          <td></td>
+          <td>Nyköping</td>
+          <td><a href="tel:0155-530 19">0155-530 19</a></td>
+          <td>info@agestaridskola.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">49</td>
+          <td><strong>Österlens Ryttarförening</strong></td>
+          <td></td>
+          <td>Onslunda</td>
+          <td><a href="tel:0417-231 50">0417-231 50</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">50</td>
+          <td><strong>Osbyortens Ryttareförening</strong></td>
+          <td></td>
+          <td>Osby</td>
+          <td><a href="tel:0479-145 04">0479-145 04</a></td>
+          <td>anna.chu@aveqia.com</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">51</td>
+          <td><strong>Perstorps Kör & Ryttarförening</strong></td>
+          <td></td>
+          <td>Perstorp</td>
+          <td><a href="tel:0435-315 16">0435-315 16</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">52</td>
+          <td><strong>Rimbo Nya Ridskola AB</strong></td>
+          <td></td>
+          <td>Rimbo</td>
+          <td><a href="tel:0175-729 95">0175-729 95</a></td>
+          <td>ridskolanhallstavik@gmail.com</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">53</td>
+          <td><strong>Råneå ridhus</strong></td>
+          <td></td>
+          <td>Råneå</td>
+          <td><a href="tel:0924-550 07">0924-550 07</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">54</td>
+          <td><strong>Roslagens Rid o Körklubb</strong></td>
+          <td></td>
+          <td>Rö</td>
+          <td><a href="tel:0175-620 62">0175-620 62</a></td>
+          <td>info@agestaridskola.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">55</td>
+          <td><strong>Svalövsortens Ridhusförening</strong></td>
+          <td></td>
+          <td>Svalöv</td>
+          <td><a href="tel:0413-730 07">0413-730 07</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">56</td>
+          <td><strong>Fiedahls Ridskola</strong></td>
+          <td></td>
+          <td>Svedala</td>
+          <td><a href="tel:070-339 66 19">070-339 66 19</a></td>
+          <td>patrik@halsinglandsmediabyra.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">57</td>
+          <td><strong>Tranemoryttarna</strong></td>
+          <td></td>
+          <td>Tranemo</td>
+          <td><a href="tel:0325-764 07">0325-764 07</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">58</td>
+          <td><strong>Botkyrka Ridsällskap</strong></td>
+          <td></td>
+          <td>Tumba</td>
+          <td><a href="tel:08-530 391 44">08-530 391 44</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">59</td>
+          <td><strong>Amatörryttarklubben</strong></td>
+          <td></td>
+          <td>Täby</td>
+          <td><a href="tel:08-756 26 59">08-756 26 59</a></td>
+          <td>info@sil.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">60</td>
+          <td><strong>Hagby Ryttarförening</strong></td>
+          <td></td>
+          <td>Täby</td>
+          <td><a href="tel:08-510 203 26">08-510 203 26</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">61</td>
+          <td><strong>Kvistofta Ridklubb</strong></td>
+          <td></td>
+          <td>Vallåkra</td>
+          <td><a href="tel:042-32 11 54">042-32 11 54</a></td>
+          <td>info@agestaridskola.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">62</td>
+          <td><strong>Rävhagens Ridskola</strong></td>
+          <td></td>
+          <td>Visby</td>
+          <td><a href="tel:0498-27 86 75">0498-27 86 75</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">63</td>
+          <td><strong>Stall Fyrklövern</strong></td>
+          <td></td>
+          <td>Visby</td>
+          <td><a href="tel:0498-27 75 79">0498-27 75 79</a></td>
+          <td>info@agestaridskola.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">64</td>
+          <td><strong>Eldhästar Småland</strong></td>
+          <td></td>
+          <td>Vissefjärda</td>
+          <td><a href="tel:0471-220 32">0471-220 32</a></td>
+          <td>info@agestaridskola.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">65</td>
+          <td><strong>Haningebygdens Ryttarföre</strong></td>
+          <td></td>
+          <td>Västerhaninge</td>
+          <td><a href="tel:08-500 273 42">08-500 273 42</a></td>
+          <td>info@agestaridskola.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">66</td>
+          <td><strong>Stora Ekeby Ridskola AB</strong></td>
+          <td></td>
+          <td>Västerås</td>
+          <td><a href="tel:0220-438 10">0220-438 10</a></td>
+          <td>marika@yogama.nu</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">67</td>
+          <td><strong>Dvärsätts Ryttarförening</strong></td>
+          <td></td>
+          <td>Ås</td>
+          <td><a href="tel:063-380 06">063-380 06</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">68</td>
+          <td><strong>Åstorpsortens Ryttarförening</strong></td>
+          <td></td>
+          <td>Åstorp</td>
+          <td><a href="tel:042-598 20">042-598 20</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">69</td>
+          <td><strong>Åtvidabergs Ridklubb</strong></td>
+          <td></td>
+          <td>Åtvidaberg</td>
+          <td><a href="tel:0120-129 44">0120-129 44</a></td>
+          <td>info@agestaridskola.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">70</td>
+          <td><strong>Karlsdals Gård Ridklubb</strong></td>
+          <td></td>
+          <td>Örebro</td>
+          <td><a href="tel:070-227 67 19">070-227 67 19</a></td>
+          <td>karlsdalsgard@spray.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">71</td>
+          <td><strong>Stall Bokeslätt Sölvesborgs Ridskola</strong></td>
+          <td>Blekinge län</td>
+          <td>Sölvesborg</td>
+          <td><a href="tel:070-871 77 99">070-871 77 99</a></td>
+          <td>bokeslott4@hotmail.com</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">72</td>
+          <td><strong>Bjursås Ridklubb</strong></td>
+          <td>Dalarnas län</td>
+          <td>Bjursås</td>
+          <td><a href="tel:023-503 43">023-503 43</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">73</td>
+          <td><strong>Norr Amsbergs Ridklubb</strong></td>
+          <td>Dalarnas län</td>
+          <td>Borlänge</td>
+          <td><a href="tel:0243-883 83">0243-883 83</a></td>
+          <td>ramstrom.massage@gmail.com</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">74</td>
+          <td><strong>Åsebo Ridsällskap</strong></td>
+          <td>Dalarnas län</td>
+          <td>Folkärna</td>
+          <td><a href="tel:0226-565 25">0226-565 25</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">75</td>
+          <td><strong>Vargheden islandshästar Bed & Breakfast</strong></td>
+          <td>Dalarnas län</td>
+          <td>Malung</td>
+          <td><a href="tel:070-241 44 96">070-241 44 96</a></td>
+          <td>info@vargheden.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">76</td>
+          <td><strong>Svärdsjö Ridklubb</strong></td>
+          <td>Dalarnas län</td>
+          <td>Svärdsjö</td>
+          <td><a href="tel:0246-512 91">0246-512 91</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">77</td>
+          <td><strong>Tunalids Ridklubb</strong></td>
+          <td>Gävleborgs län</td>
+          <td>Hudiksvall</td>
+          <td><a href="tel:0650-137 45">0650-137 45</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">78</td>
+          <td><strong>Storviks Ridklubb</strong></td>
+          <td>Gävleborgs län</td>
+          <td>Kungsgården</td>
+          <td><a href="tel:0290-376 61">0290-376 61</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">79</td>
+          <td><strong>Ljusdals Ridklubb</strong></td>
+          <td>Gävleborgs län</td>
+          <td>Ljusdal</td>
+          <td><a href="tel:0651-149 85">0651-149 85</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">80</td>
+          <td><strong>Tönnersa Ridklubb</strong></td>
+          <td>Hallands län</td>
+          <td>Eldsberga</td>
+          <td><a href="tel:035-461 36">035-461 36</a></td>
+          <td>info@kedvaxjo.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">81</td>
+          <td><strong>Falkenbergsortens Ryttarförening</strong></td>
+          <td>Hallands län</td>
+          <td>Falkenberg</td>
+          <td><a href="tel:0346-120 42">0346-120 42</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">82</td>
+          <td><strong>Fjärås Ridskola Handelsbolag</strong></td>
+          <td>Hallands län</td>
+          <td>Fjärås</td>
+          <td><a href="tel:0300-413 60">0300-413 60</a></td>
+          <td>susanneruus@hotmail.com</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">83</td>
+          <td><strong>Ätrabygdens Ridklubb</strong></td>
+          <td>Hallands län</td>
+          <td>Älvsered</td>
+          <td><a href="tel:070-326 46 81">070-326 46 81</a></td>
+          <td>atrabygden@gmail.com</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">84</td>
+          <td><strong>Östjämtens Ridskola Ekonomisk Förening</strong></td>
+          <td>Jämtlands län</td>
+          <td>Hammarstrand</td>
+          <td><a href="tel:070-389 19 17">070-389 19 17</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">85</td>
+          <td><strong>G Einarsson Islandshästutbildning</strong></td>
+          <td>Jämtlands län</td>
+          <td>Nälden</td>
+          <td><a href="tel:070-239 17 75">070-239 17 75</a></td>
+          <td>info@geinarsson.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">86</td>
+          <td><strong>Åsbygdens Ridskola Ek. För.</strong></td>
+          <td>Jämtlands län</td>
+          <td>Ås</td>
+          <td><a href="tel:070-363 39 39">070-363 39 39</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">87</td>
+          <td><strong>Bankeryds Ridskola</strong></td>
+          <td>Jönköpings län</td>
+          <td>Bankeryd</td>
+          <td><a href="tel:036-37 90 36">036-37 90 36</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">88</td>
+          <td><strong>Grankärrs Gränsryttare</strong></td>
+          <td>Jönköpings län</td>
+          <td>Gränna</td>
+          <td><a href="tel:0390-305 20">0390-305 20</a></td>
+          <td>info@kedvaxjo.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">89</td>
+          <td><strong>Vedbände Gård</strong></td>
+          <td>Jönköpings län</td>
+          <td>Korsberga</td>
+          <td><a href="tel:0383-840 00">0383-840 00</a></td>
+          <td>info@vedbande.nu</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">90</td>
+          <td><strong>Fridhems Ridskola Tranås</strong></td>
+          <td>Jönköpings län</td>
+          <td>Tranås</td>
+          <td><a href="tel:070-357 57 70">070-357 57 70</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">91</td>
+          <td><strong>Värnamobygdens Ryttarförening</strong></td>
+          <td>Jönköpings län</td>
+          <td>Värnamo</td>
+          <td><a href="tel:0370-122 25">0370-122 25</a></td>
+          <td>info@kedvaxjo.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">92</td>
+          <td><strong>Växjöortens Fältrittklubb</strong></td>
+          <td>Kronobergs län</td>
+          <td>Växjö</td>
+          <td><a href="tel:0470-695 84">0470-695 84</a></td>
+          <td>info@musikochmassage.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">93</td>
+          <td><strong>Bergström Emilia</strong></td>
+          <td>Norrbottens län</td>
+          <td>Boden</td>
+          <td><a href="tel:073-085 13 37">073-085 13 37</a></td>
+          <td>hanna@dejeveterinarpraktik.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">94</td>
+          <td><strong>Överkalix Ridklubb</strong></td>
+          <td>Norrbottens län</td>
+          <td>Överkalix</td>
+          <td><a href="tel:0926-550 75">0926-550 75</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">95</td>
+          <td><strong>Råby Ridklubb</strong></td>
+          <td>Skåne län</td>
+          <td>Bromölla</td>
+          <td><a href="tel:0456-227 80">0456-227 80</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">96</td>
+          <td><strong>Hittarps Ridklubb</strong></td>
+          <td>Skåne län</td>
+          <td>Helsingborg</td>
+          <td><a href="tel:042-911 54">042-911 54</a></td>
+          <td>info@kedvaxjo.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">97</td>
+          <td><strong>Frosta Ryttarförening</strong></td>
+          <td>Skåne län</td>
+          <td>Hörby</td>
+          <td><a href="tel:0415-121 01">0415-121 01</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">98</td>
+          <td><strong>Åsbo Ponnyklubb</strong></td>
+          <td>Skåne län</td>
+          <td>Klippan</td>
+          <td><a href="tel:0435-100 22">0435-100 22</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">99</td>
+          <td><strong>Fjärens Ridcenter</strong></td>
+          <td>Skåne län</td>
+          <td>Knislinge</td>
+          <td><a href="tel:044-653 42">044-653 42</a></td>
+          <td>info@blekingeplantan.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">100</td>
+          <td><strong>Staffanstorps Ridsportfören</strong></td>
+          <td>Skåne län</td>
+          <td>Staffanstorp</td>
+          <td><a href="tel:046-25 74 24">046-25 74 24</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">101</td>
+          <td><strong>Flyinge Ryttareförening</strong></td>
+          <td>Skåne län</td>
+          <td>Södra Sandby</td>
+          <td><a href="tel:046-513 64">046-513 64</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">102</td>
+          <td><strong>Vinslövs Ryttarförening</strong></td>
+          <td>Skåne län</td>
+          <td>Vinslöv</td>
+          <td><a href="tel:044-807 11">044-807 11</a></td>
+          <td>info@innebandy24.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">103</td>
+          <td><strong>Ödåkra Ridsällskap</strong></td>
+          <td>Skåne län</td>
+          <td>Ödåkra</td>
+          <td><a href="tel:042-20 49 80">042-20 49 80</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">104</td>
+          <td><strong>Djursholms Ridklubb</strong></td>
+          <td>Stockholms län</td>
+          <td>Djursholm</td>
+          <td><a href="tel:08-755 21 62">08-755 21 62</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">105</td>
+          <td><strong>Lidingö Ryttarförening</strong></td>
+          <td>Stockholms län</td>
+          <td>Lidingö</td>
+          <td><a href="tel:08-731 08 95">08-731 08 95</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">106</td>
+          <td><strong>Saltsjöbadens Ryttarförening</strong></td>
+          <td>Stockholms län</td>
+          <td>Saltsjöbaden</td>
+          <td><a href="tel:08-717 92 47">08-717 92 47</a></td>
+          <td>mariefarnert@gmail.com</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">107</td>
+          <td><strong>Sollentuna Ridklubb</strong></td>
+          <td>Stockholms län</td>
+          <td>Sollentuna</td>
+          <td><a href="tel:08-754 50 40">08-754 50 40</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">108</td>
+          <td><strong>Hufvudsta Ridskola AB</strong></td>
+          <td>Stockholms län</td>
+          <td>Solna</td>
+          <td><a href="tel:08-83 12 34">08-83 12 34</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">109</td>
+          <td><strong>Swartlings Ridskola Ryttarstadion AB</strong></td>
+          <td>Stockholms län</td>
+          <td>Stockholm</td>
+          <td><a href="tel:070-570 14 24">070-570 14 24</a></td>
+          <td>swartlingsridskola@hotmail.com</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">110</td>
+          <td><strong>Tungelsta Ridklubb</strong></td>
+          <td>Stockholms län</td>
+          <td>Tungelsta</td>
+          <td><a href="tel:08-500 311 70">08-500 311 70</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">111</td>
+          <td><strong>Fightright</strong></td>
+          <td>Stockholms län</td>
+          <td>Vendelsö</td>
+          <td><a href="tel:070-728 01 22">070-728 01 22</a></td>
+          <td>imen.khchini@gmail.com</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">112</td>
+          <td><strong>Håcknesta Gård AB</strong></td>
+          <td>Södermanlands län</td>
+          <td>Nyköping</td>
+          <td><a href="tel:070-251 76 60">070-251 76 60</a></td>
+          <td>vet.sofia.stenberg@gmail.com</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">113</td>
+          <td><strong>Aw Rid Lätt</strong></td>
+          <td>Uppsala län</td>
+          <td>Almunge</td>
+          <td><a href="tel:073-922 87 77">073-922 87 77</a></td>
+          <td>marika@yogama.nu</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">114</td>
+          <td><strong>Gimo Ridklubb</strong></td>
+          <td>Uppsala län</td>
+          <td>Gimo</td>
+          <td><a href="tel:0174-17 13 43">0174-17 13 43</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">115</td>
+          <td><strong>Maritha Lindstedts Häst & Ridutbildning</strong></td>
+          <td>Uppsala län</td>
+          <td>Örsundsbro</td>
+          <td><a href="tel:0171-41 22 09">0171-41 22 09</a></td>
+          <td>marika@yogama.nu</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">116</td>
+          <td><strong>Hammarö Ryttareförening</strong></td>
+          <td>Värmlands län</td>
+          <td>Hammarö</td>
+          <td><a href="tel:054-52 43 03">054-52 43 03</a></td>
+          <td>hammarorf@telia.com</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">117</td>
+          <td><strong>Kils Ryttarförening</strong></td>
+          <td>Värmlands län</td>
+          <td>Kil</td>
+          <td><a href="tel:0554-408 29">0554-408 29</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">118</td>
+          <td><strong>Nordmarkens Ridklubb</strong></td>
+          <td>Värmlands län</td>
+          <td>Årjäng</td>
+          <td><a href="tel:0573-71 16 30">0573-71 16 30</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">119</td>
+          <td><strong>Nordmalings Ridklubb</strong></td>
+          <td>Västerbottens län</td>
+          <td>Nordmaling</td>
+          <td><a href="tel:0930-313 52">0930-313 52</a></td>
+          <td>anna.chu@aveqia.com</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">120</td>
+          <td><strong>Norsjö Ridhus AB</strong></td>
+          <td>Västerbottens län</td>
+          <td>Norsjö</td>
+          <td><a href="tel:0918-108 59">0918-108 59</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">121</td>
+          <td><strong>Vännäs Ryttarförening</strong></td>
+          <td>Västerbottens län</td>
+          <td>Vännäs</td>
+          <td><a href="tel:0935-516 12">0935-516 12</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">122</td>
+          <td><strong>Åsele Ridklubb</strong></td>
+          <td>Västerbottens län</td>
+          <td>Åsele</td>
+          <td><a href="tel:0941-200 13">0941-200 13</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">123</td>
+          <td><strong>Sundsvalls Ridklubb</strong></td>
+          <td>Västernorrlands län</td>
+          <td>Sundsvall</td>
+          <td><a href="tel:060-56 39 89">060-56 39 89</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">124</td>
+          <td><strong>IS Dressage</strong></td>
+          <td>Västernorrlands län</td>
+          <td>Sörberge</td>
+          <td><a href="tel:073-836 68 57">073-836 68 57</a></td>
+          <td>info@isdressage.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">125</td>
+          <td><strong>Ånge Ridklubb</strong></td>
+          <td>Västernorrlands län</td>
+          <td>Ånge</td>
+          <td><a href="tel:0690-615 11">0690-615 11</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">126</td>
+          <td><strong>Arboga Ryttarsällskap</strong></td>
+          <td>Västmanlands län</td>
+          <td>Arboga</td>
+          <td><a href="tel:0589-173 37">0589-173 37</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">127</td>
+          <td><strong>Gl Ryttarutbildning AB</strong></td>
+          <td>Västmanlands län</td>
+          <td>Fjärdhundra</td>
+          <td><a href="tel:0224-260 88">0224-260 88</a></td>
+          <td>ramstrom.massage@gmail.com</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">128</td>
+          <td><strong>Kungsörs Ridklubb</strong></td>
+          <td>Västmanlands län</td>
+          <td>Kungsör</td>
+          <td><a href="tel:076-555 92 72">076-555 92 72</a></td>
+          <td>kungsors.ridklubb@live.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">129</td>
+          <td><strong>Ridskolans Matsalar</strong></td>
+          <td>Västmanlands län</td>
+          <td>Strömsholm</td>
+          <td><a href="tel:0220-434 54">0220-434 54</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">130</td>
+          <td><strong>Rocklunda Ridskola AB</strong></td>
+          <td>Västmanlands län</td>
+          <td>Västerås</td>
+          <td><a href="tel:021-18 88 83">021-18 88 83</a></td>
+          <td>ramstrom.massage@gmail.com</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">131</td>
+          <td><strong>Askims Fältrittklubb</strong></td>
+          <td>Västra Götalands län</td>
+          <td>Askim</td>
+          <td><a href="tel:031-28 51 65">031-28 51 65</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">132</td>
+          <td><strong>Billdals Ridklubb</strong></td>
+          <td>Västra Götalands län</td>
+          <td>Billdal</td>
+          <td><a href="tel:031-91 09 12">031-91 09 12</a></td>
+          <td>info@testyourhealth.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">133</td>
+          <td><strong>ale Jennylunds Ridklubb</strong></td>
+          <td>Västra Götalands län</td>
+          <td>Bohus</td>
+          <td><a href="tel:031-98 25 00">031-98 25 00</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">134</td>
+          <td><strong>Ponnylyckans Ridskola Christel Oscarsson</strong></td>
+          <td>Västra Götalands län</td>
+          <td>Bollebygd</td>
+          <td><a href="tel:031-16 53 99">031-16 53 99</a></td>
+          <td>info@testyourhealth.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">135</td>
+          <td><strong>Nääs Ryttarförening</strong></td>
+          <td>Västra Götalands län</td>
+          <td>Floda</td>
+          <td><a href="tel:0302-348 65">0302-348 65</a></td>
+          <td>info@agestaridskola.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">136</td>
+          <td><strong>Gråbo Ridklubb</strong></td>
+          <td>Västra Götalands län</td>
+          <td>Gråbo</td>
+          <td><a href="tel:0302-413 29">0302-413 29</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">137</td>
+          <td><strong>Stora Torps Ridklubb</strong></td>
+          <td>Västra Götalands län</td>
+          <td>Göteborg</td>
+          <td><a href="tel:031-40 78 13">031-40 78 13</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">138</td>
+          <td><strong>Orust Ridklubb</strong></td>
+          <td>Västra Götalands län</td>
+          <td>Henån</td>
+          <td><a href="tel:0304-595 75">0304-595 75</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">139</td>
+          <td><strong>Lunna Ridklubb</strong></td>
+          <td>Västra Götalands län</td>
+          <td>Kungälv</td>
+          <td><a href="tel:0303-24 93 25">0303-24 93 25</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">140</td>
+          <td><strong>Föreningen Gäseneryttarna</strong></td>
+          <td>Västra Götalands län</td>
+          <td>Ljung</td>
+          <td><a href="tel:0321-840 33">0321-840 33</a></td>
+          <td>invoice@sportkompanietkarlskrona.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">141</td>
+          <td><strong>Mariestads Ridklubb</strong></td>
+          <td>Västra Götalands län</td>
+          <td>Mariestad</td>
+          <td><a href="tel:0501-355 35">0501-355 35</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">142</td>
+          <td><strong>Munkedals Ridklubb</strong></td>
+          <td>Västra Götalands län</td>
+          <td>Munkedal</td>
+          <td><a href="tel:0524-234 00">0524-234 00</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">143</td>
+          <td><strong>Gunnebo Ryttarsällskap</strong></td>
+          <td>Västra Götalands län</td>
+          <td>Mölndal</td>
+          <td><a href="tel:031-27 62 00">031-27 62 00</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">144</td>
+          <td><strong>Tanums Ridklubb</strong></td>
+          <td>Västra Götalands län</td>
+          <td>Tanumshede</td>
+          <td><a href="tel:0525-292 97">0525-292 97</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">145</td>
+          <td><strong>Tidaholmsbygdens Hästklubb</strong></td>
+          <td>Västra Götalands län</td>
+          <td>Tidaholm</td>
+          <td><a href="tel:0502-124 58">0502-124 58</a></td>
+          <td>emelie@emjoy.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">146</td>
+          <td><strong>Ubrk i Ulricehamn</strong></td>
+          <td>Västra Götalands län</td>
+          <td>Ulricehamn</td>
+          <td><a href="tel:0321-165 95">0321-165 95</a></td>
+          <td>emelie@emjoy.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">147</td>
+          <td><strong>Kongahälla Ridsällskap</strong></td>
+          <td>Västra Götalands län</td>
+          <td>Ytterby</td>
+          <td><a href="tel:0303-920 45">0303-920 45</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">148</td>
+          <td><strong>Gyttorps Ridklubb</strong></td>
+          <td>Örebro län</td>
+          <td>Gyttorp</td>
+          <td><a href="tel:0587-154 74">0587-154 74</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">149</td>
+          <td><strong>Boxholms Ridklubb</strong></td>
+          <td>Östergötlands län</td>
+          <td>Boxholm</td>
+          <td><a href="tel:0142-513 43">0142-513 43</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">150</td>
+          <td><strong>Kinda Ryttarförening</strong></td>
+          <td>Östergötlands län</td>
+          <td>Kisa</td>
+          <td><a href="tel:0494-106 86">0494-106 86</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">151</td>
+          <td><strong>Fredriksborgs Ridsport</strong></td>
+          <td>Östergötlands län</td>
+          <td>Linköping</td>
+          <td><a href="tel:013-15 29 75">013-15 29 75</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">152</td>
+          <td><strong>Linköpings Fältrittklubb</strong></td>
+          <td>Östergötlands län</td>
+          <td>Linköping</td>
+          <td><a href="tel:013-15 53 01">013-15 53 01</a></td>
+          <td>lfk@linkopingsfaltrittklubb.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">153</td>
+          <td><strong>Stall Sätra</strong></td>
+          <td>Östergötlands län</td>
+          <td>Skärblacka</td>
+          <td><a href="tel:0122-202 33">0122-202 33</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">154</td>
+          <td><strong>Stall Solbacken</strong></td>
+          <td>Östergötlands län</td>
+          <td>Vikingstad</td>
+          <td><a href="tel:013-824 26">013-824 26</a></td>
+          <td>ann-katrin.vestberg@kontek.se</td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="num">155</td>
+          <td><strong>Ydre Ridklubb</strong></td>
+          <td>Östergötlands län</td>
+          <td>Ydre</td>
+          <td><a href="tel:0381-606 58">0381-606 58</a></td>
+          <td></td>
+          <td>
+            <span class="status-badge status-new">Ej kontaktad</span>
+          </td>
+        </tr>
+  </tbody>
+</table>
+
+<script>
+  var input = document.getElementById('search-filter');
+  var counter = document.getElementById('visible-count');
+  input.addEventListener('input', function() {
+    var q = this.value.toLowerCase();
+    var rows = document.querySelectorAll('#pitch-table tbody tr');
+    var visible = 0;
+    rows.forEach(function(row) {
+      var text = row.textContent.toLowerCase();
+      if (!q || text.includes(q)) {
+        row.style.display = '';
+        visible++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+    counter.textContent = visible + ' visas';
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synas bättre på HästSverige – Paket &amp; Priser</title>
+  <meta name="description" content="Lyft fram din hästverksamhet. Välj ett paket och syns högt i sökresultaten på Sveriges mest kompletta hästportal. Från 199 kr/månad.">
+  <link rel="canonical" href="https://ridskolor-i-sverige.se/annonsera.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <style>
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.75rem;
+      margin: 3rem 0;
+      align-items: start;
+    }
+
+    .pricing-card {
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem 1.75rem 2rem;
+      text-align: center;
+      position: relative;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .pricing-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+    }
+
+    .pricing-card.popular {
+      border-color: var(--rose);
+      box-shadow: 0 0 0 4px rgba(196, 96, 122, 0.12);
+    }
+
+    .pricing-card.premium-card {
+      border-color: var(--gold);
+      background: linear-gradient(160deg, #FFFBF0, var(--white));
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--rose);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 1rem;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+
+    .pricing-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+      line-height: 1;
+    }
+
+    .pricing-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .pricing-tagline {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-price {
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-price strong {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--rose-dark);
+      line-height: 1;
+    }
+
+    .pricing-price span {
+      font-size: 0.88rem;
+      color: var(--text-light);
+    }
+
+    .pricing-free strong {
+      color: var(--green-dark);
+    }
+
+    .pricing-features {
+      text-align: left;
+      margin-bottom: 1.75rem;
+    }
+
+    .pricing-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-mid);
+    }
+
+    .pricing-features li:last-child {
+      border-bottom: none;
+    }
+
+    .pricing-features li .check {
+      color: var(--green);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .pricing-features li .cross {
+      color: var(--text-light);
+      flex-shrink: 0;
+    }
+
+    .pricing-cta {
+      display: block;
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    .cta-free {
+      background: var(--cream);
+      color: var(--text-mid);
+      border: 2px solid var(--border);
+    }
+
+    .cta-free:hover {
+      background: var(--border);
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .cta-featured {
+      background: var(--rose-pale);
+      color: var(--rose-dark);
+      border: 2px solid var(--rose-light);
+    }
+
+    .cta-featured:hover {
+      background: var(--rose-light);
+      text-decoration: none;
+    }
+
+    .cta-premium {
+      background: linear-gradient(135deg, var(--rose-dark), var(--rose));
+      color: var(--white);
+      border: 2px solid transparent;
+    }
+
+    .cta-premium:hover {
+      background: linear-gradient(135deg, #6E2A40, var(--rose-dark));
+      color: var(--white);
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(139, 58, 82, 0.3);
+    }
+
+    .cta-gold {
+      background: linear-gradient(135deg, #A87820, var(--gold));
+      color: var(--white);
+      border: 2px solid transparent;
+    }
+
+    .cta-gold:hover {
+      background: linear-gradient(135deg, #8A6010, #A87820);
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    /* Contact form */
+    .contact-form-wrap {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-mid);
+      margin-bottom: 0.35rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+      background: var(--cream);
+      transition: border-color 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--rose);
+      background: var(--white);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(135deg, var(--rose-dark), var(--rose));
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Inter', system-ui, sans-serif;
+      transition: all 0.2s ease;
+    }
+
+    .form-submit:hover {
+      background: linear-gradient(135deg, #6E2A40, var(--rose-dark));
+      box-shadow: 0 4px 16px rgba(139, 58, 82, 0.3);
+    }
+
+    .trust-icons {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      margin: 3rem 0 1rem;
+    }
+
+    .trust-icon-item {
+      text-align: center;
+    }
+
+    .trust-icon-item span {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .trust-icon-item p {
+      font-size: 0.85rem;
+      color: var(--text-mid);
+    }
+
+    @media (max-width: 768px) {
+      .pricing-grid { grid-template-columns: 1fr; }
+      .contact-form-wrap { padding: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="main-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-horse">🐴</span> HästSverige
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Startsida</a></li>
+        <li><a href="index.html#kategorier">Kategorier</a></li>
+        <li><a href="index.html#regioner">Alla Län</a></li>
+        <li><a href="index.html#search">Sök</a></li>
+        <li><a href="blogg/index.html">Blogg</a></li>
+        <li><a href="annonsera.html" class="nav-cta active">Annonsera</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Öppna meny" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" style="padding-bottom:0;">
+    <div class="hero-bg-pattern"></div>
+    <div class="container" style="padding-bottom:4rem;">
+      <p class="hero-eyebrow">För hästverksamheter</p>
+      <h1>Nå fler kunder<br><em>med rätt synlighet</em></h1>
+      <div class="hero-divider"></div>
+      <p class="hero-sub" style="max-width:560px;margin:0 auto;">HästSverige är portalen som hästmänniskor söker på när de letar ridskola, turridning, hästkalas, ridläger och mer. Syns du högt upp — når du fler kunder.</p>
+    </div>
+    <div class="hero-wave">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 70" preserveAspectRatio="none">
+        <path d="M0,35 C240,70 480,0 720,35 C960,70 1200,0 1440,35 L1440,70 L0,70 Z" fill="#FDF7F2"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Why advertise -->
+  <section style="background:var(--cream);padding:3rem 0 1rem;">
+    <div class="container">
+      <div class="trust-icons">
+        <div class="trust-icon-item">
+          <span>🔍</span>
+          <p><strong>Sökmotortrafik</strong><br>Vi syns på Google för<br>"ridskola [stad/län]"</p>
+        </div>
+        <div class="trust-icon-item">
+          <span>📍</span>
+          <p><strong>715+ verksamheter</strong><br>Vi är Sveriges mest<br>kompletta hästportal</p>
+        </div>
+        <div class="trust-icon-item">
+          <span>👨‍👩‍👧</span>
+          <p><strong>Relevant publik</strong><br>Föräldrar &amp; ryttare som<br>aktivt söker ridskola</p>
+        </div>
+        <div class="trust-icon-item">
+          <span>📈</span>
+          <p><strong>Växande trafik</strong><br>Nya besökare varje<br>vecka via SEO</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section style="padding:3rem 0 4rem;">
+    <div class="container">
+      <div class="section-header centered">
+        <h2>Välj ditt paket</h2>
+        <p>Alla verksamheter finns redan gratis — uppgradera för att synas bättre.</p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- Free -->
+        <div class="pricing-card pricing-free">
+          <div class="pricing-icon">📋</div>
+          <p class="pricing-name">Gratis</p>
+          <p class="pricing-tagline">Standard-listning</p>
+          <div class="pricing-price pricing-free">
+            <strong>0</strong>
+            <span> kr/mån</span>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> Namn, adress och stad</li>
+            <li><span class="check">✓</span> Telefonnummer</li>
+            <li><span class="check">✓</span> Länk till hemsida</li>
+            <li><span class="cross">–</span> Prioriterad sortering</li>
+            <li><span class="cross">–</span> Framhävd rad i listningen</li>
+            <li><span class="cross">–</span> Utökad beskrivning</li>
+            <li><span class="cross">–</span> Logotyp</li>
+          </ul>
+          <a href="index.html#search" class="pricing-cta cta-free">Se din listning</a>
+        </div>
+
+        <!-- Featured -->
+        <div class="pricing-card popular">
+          <div class="popular-badge">Populärast</div>
+          <div class="pricing-icon">⭐</div>
+          <p class="pricing-name">Framhävd</p>
+          <p class="pricing-tagline">Syns före gratislistningar</p>
+          <div class="pricing-price">
+            <strong>199</strong>
+            <span> kr/mån</span>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> Namn, adress och stad</li>
+            <li><span class="check">✓</span> Telefonnummer</li>
+            <li><span class="check">✓</span> Länk till hemsida</li>
+            <li><span class="check">✓</span> <strong>Prioriterad sortering ⭐</strong></li>
+            <li><span class="check">✓</span> <strong>Gul framhävd rad</strong></li>
+            <li><span class="cross">–</span> Utökad beskrivning</li>
+            <li><span class="cross">–</span> Logotyp</li>
+          </ul>
+          <a href="#kontakt" class="pricing-cta cta-featured">Kom igång →</a>
+        </div>
+
+        <!-- Premium -->
+        <div class="pricing-card premium-card">
+          <div class="pricing-icon">🏆</div>
+          <p class="pricing-name">Premium</p>
+          <p class="pricing-tagline">Överst i ditt län</p>
+          <div class="pricing-price">
+            <strong>399</strong>
+            <span> kr/mån</span>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> Namn, adress och stad</li>
+            <li><span class="check">✓</span> Telefonnummer</li>
+            <li><span class="check">✓</span> Länk till hemsida</li>
+            <li><span class="check">✓</span> <strong>Överst i länskategorin 🏆</strong></li>
+            <li><span class="check">✓</span> <strong>Guld-ram &amp; badge</strong></li>
+            <li><span class="check">✓</span> <strong>Utökad beskrivning (150 tecken)</strong></li>
+            <li><span class="check">✓</span> <strong>Logotyp i listningen</strong></li>
+          </ul>
+          <a href="#kontakt" class="pricing-cta cta-premium">Välj Premium →</a>
+        </div>
+
+        <!-- Banner -->
+        <div class="pricing-card">
+          <div class="pricing-icon">📣</div>
+          <p class="pricing-name">Läns-banner</p>
+          <p class="pricing-tagline">Exklusiv annonsplats per län</p>
+          <div class="pricing-price">
+            <strong>999</strong>
+            <span> kr/mån</span>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> Allt i Premium-paketet</li>
+            <li><span class="check">✓</span> <strong>Exklusiv banner överst på läns-sidan</strong></li>
+            <li><span class="check">✓</span> <strong>Logotyp + tagline + bild</strong></li>
+            <li><span class="check">✓</span> <strong>Länk direkt till er hemsida/anmälan</strong></li>
+            <li><span class="check">✓</span> <strong>Statistik: visningar &amp; klick/mån</strong></li>
+            <li><span class="check">✓</span> <em>1 per län — exklusivt</em></li>
+          </ul>
+          <a href="#kontakt" class="pricing-cta cta-gold">Fråga om tillgänglighet</a>
+        </div>
+
+      </div>
+
+      <p style="text-align:center;font-size:0.88rem;color:var(--text-light);margin-top:-1rem;">
+        Alla priser exkl. moms. Månadsavtal, avbokas när som helst. Frågor? <a href="mailto:info@ridskolor-i-sverige.se">Kontakta oss</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact form -->
+  <section id="kontakt" style="background:var(--white);padding:4rem 0 5rem;">
+    <div class="container">
+      <div class="section-header centered" style="margin-bottom:2rem;">
+        <h2>Kom igång idag</h2>
+        <p>Fyll i formuläret så hör vi av oss inom 24 timmar med ett bekräftelsemejl och betalningslänk.</p>
+      </div>
+
+      <div class="contact-form-wrap">
+        <form action="https://formspree.io/f/DITT-FORMSPREE-ID" method="POST">
+          <div class="form-group">
+            <label for="school-name">Verksamhetens namn *</label>
+            <input type="text" id="school-name" name="school_name" required placeholder="t.ex. Åby Ridskola">
+          </div>
+          <div class="form-group">
+            <label for="contact-name">Kontaktperson *</label>
+            <input type="text" id="contact-name" name="contact_name" required placeholder="Ditt namn">
+          </div>
+          <div class="form-group">
+            <label for="email">E-post *</label>
+            <input type="email" id="email" name="email" required placeholder="din@ridskola.se">
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" placeholder="070-000 00 00">
+          </div>
+          <div class="form-group">
+            <label for="package">Paket *</label>
+            <select id="package" name="package" required>
+              <option value="">Välj paket...</option>
+              <option value="featured">Framhävd — 199 kr/mån</option>
+              <option value="premium">Premium — 399 kr/mån</option>
+              <option value="banner">Läns-banner — 999 kr/mån</option>
+              <option value="question">Bara en fråga</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Övrigt (valfritt)</label>
+            <textarea id="message" name="message" placeholder="Ditt meddelande..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Skicka förfrågan →</button>
+        </form>
+        <p style="text-align:center;font-size:0.82rem;color:var(--text-light);margin-top:1rem;">
+          Vi svarar inom 24 timmar på vardagar. Eller ring oss direkt:
+          <a href="tel:+46000000000">0xx-000 00 00</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:var(--cream);padding:4rem 0;">
+    <div class="container" style="max-width:760px;">
+      <div class="section-header centered">
+        <h2>Vanliga frågor</h2>
+      </div>
+      <div style="margin-top:2rem;">
+        <details style="margin-bottom:1rem;background:var(--white);border-radius:12px;padding:1.1rem 1.5rem;border:1px solid var(--border);">
+          <summary style="font-weight:600;cursor:pointer;color:var(--rose-dark);">Hur lång är bindningstiden?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-mid);font-size:0.93rem;">Det finns ingen bindningstid. Du kan avsluta ditt paket när som helst med en månads uppsägningstid.</p>
+        </details>
+        <details style="margin-bottom:1rem;background:var(--white);border-radius:12px;padding:1.1rem 1.5rem;border:1px solid var(--border);">
+          <summary style="font-weight:600;cursor:pointer;color:var(--rose-dark);">Hur betalar vi?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-mid);font-size:0.93rem;">Vi fakturerar via e-post en gång per månad. Betalning via bankgiro eller Swish. Kortbetalning är under uppstart.</p>
+        </details>
+        <details style="margin-bottom:1rem;background:var(--white);border-radius:12px;padding:1.1rem 1.5rem;border:1px solid var(--border);">
+          <summary style="font-weight:600;cursor:pointer;color:var(--rose-dark);">Hur snabbt syns vi i listan?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-mid);font-size:0.93rem;">Normalt inom 24 timmar efter bekräftad betalning. Vi kontaktar dig med instruktioner för att skicka logotyp och beskrivning.</p>
+        </details>
+        <details style="margin-bottom:1rem;background:var(--white);border-radius:12px;padding:1.1rem 1.5rem;border:1px solid var(--border);">
+          <summary style="font-weight:600;cursor:pointer;color:var(--rose-dark);">Kan vi ändra vårt paket senare?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-mid);font-size:0.93rem;">Ja, du kan uppgradera eller nedgradera ditt paket när som helst. Kontakta oss så ordnar vi det.</p>
+        </details>
+        <details style="background:var(--white);border-radius:12px;padding:1.1rem 1.5rem;border:1px solid var(--border);">
+          <summary style="font-weight:600;cursor:pointer;color:var(--rose-dark);">Vad är Läns-bannern?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-mid);font-size:0.93rem;">En exklusiv bannerplats längst upp på er läns-sida (t.ex. ridskolor-i-sverige.se/regions/stockholm.html). Bara en ridskola kan ha denna plats per län — alltså max 21 stycken i hela landet. Kontakta oss för att kolla om ert län är ledigt.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-logo">🐴 HästSverige</div>
+        <p class="footer-tagline">Sveriges kompletta hästportal.<br>Ridskolor, turridning, hästkalas och mer.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Snabblänkar</h4>
+        <ul>
+          <li><a href="index.html">Startsida</a></li>
+          <li><a href="index.html#search">Sök Verksamhet</a></li>
+          <li><a href="blogg/index.html">Blogg</a></li>
+          <li><a href="annonsera.html">Annonsera</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="mailto:info@ridskolor-i-sverige.se">info@ridskolor-i-sverige.se</a></li>
+          <li><a href="annonsera.html#kontakt">Annonsera hos oss</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 HästSverige &mdash; Sveriges kompletta hästportal.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-hamburger').addEventListener('click', function() {
+      this.classList.toggle('open');
+      this.setAttribute('aria-expanded', this.classList.contains('open'));
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

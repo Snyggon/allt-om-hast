@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HästSverige – Sveriges Kompletta Hästportal | Ridskolor, Turridning, Hästkalas & Mer</title>
+  <meta name="description" content="Sveriges kompletta hästportal. Hitta ridskolor, turridning, hästkalas, ridläger, hästpensionat och hovslagare — 715+ verksamheter i alla 21 län.">
+  <link rel="canonical" href="https://ridskolor-i-sverige.se/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="HästSverige – Sveriges Kompletta Hästportal">
+  <meta property="og:description" content="Hitta ridskolor, turridning, hästkalas, ridläger, hästpensionat och hovslagare i hela Sverige. 715+ verksamheter.">
+  <meta property="og:url" content="https://ridskolor-i-sverige.se/">
+  <meta property="og:image" content="https://ridskolor-i-sverige.se/og-image.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HästSverige – Sveriges Kompletta Hästportal">
+  <meta name="twitter:description" content="Hitta ridskolor, turridning, hästkalas, ridläger och mer i hela Sverige.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <!-- Schema.org WebSite + Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://ridskolor-i-sverige.se/#website",
+        "url": "https://ridskolor-i-sverige.se/",
+        "name": "HästSverige",
+        "description": "Sveriges kompletta hästportal — ridskolor, turridning, hästkalas, ridläger, hästpensionat och hovslagare",
+        "inLanguage": "sv",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://ridskolor-i-sverige.se/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://ridskolor-i-sverige.se/#organization",
+        "name": "HästSverige",
+        "url": "https://ridskolor-i-sverige.se/",
+        "description": "Sveriges kompletta hästportal. Vi hjälper hästmänniskor att hitta verksamheter i hela Sverige.",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Sweden"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- GA4 — Replace G-XXXXXXXXXX with your GA4 Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="main-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-horse">🐴</span> HästSverige
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Startsida</a></li>
+        <li><a href="#kategorier">Kategorier</a></li>
+        <li><a href="#regioner">Alla Län</a></li>
+        <li><a href="#search">Sök</a></li>
+        <li><a href="blogg/index.html">Blogg</a></li>
+        <li><a href="annonsera.html" class="nav-cta">Annonsera</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Öppna meny" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="container">
+      <p class="hero-eyebrow">Sveriges kompletta hästportal</p>
+      <h1>Hitta Allt Hästrelaterat<br><em>i hela Sverige</em></h1>
+      <div class="hero-divider"></div>
+      <p class="hero-sub">Ridskolor, turridning, hästkalas, ridläger, hästpensionat och hovslagare. Över 700 verksamheter från Ystad till Kiruna — gratis och utan registrering.</p>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-num" id="stat-total">715+</span>
+          <span class="stat-lbl">🐴 Verksamheter</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">6</span>
+          <span class="stat-lbl">🗂️ Kategorier</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">21</span>
+          <span class="stat-lbl">📍 Län</span>
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <a href="#search" class="btn btn-primary-inv">🔍 Sök Verksamhet</a>
+        <a href="#kategorier" class="btn btn-outline-inv">Visa kategorier →</a>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 70" preserveAspectRatio="none">
+        <path d="M0,35 C240,70 480,0 720,35 C960,70 1200,0 1440,35 L1440,70 L0,70 Z" fill="#FDF7F2"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Trust / Samlingsplatsen Section -->
+  <section class="trust-section">
+    <div class="container">
+      <div class="trust-intro">
+        <span class="trust-eyebrow">Samlingsplatsen för hästsverige</span>
+        <h2>Allt du behöver — på ett ställe</h2>
+        <p class="trust-lead">Vi har kartlagt ridskolor, turridningsföretag, hästkalas-arrangörer, ridläger, hästpensionat och hovslagare i hela Sverige. Oavsett vad du söker inom hästvärlden — du hittar det här.</p>
+      </div>
+
+      <div class="trust-pillars">
+        <div class="trust-pillar">
+          <div class="trust-pillar-icon">🗂️</div>
+          <h3>6 kategorier</h3>
+          <p>Ridskolor, turridning, hästkalas, ridläger, hästpensionat och hovslagare — allt samlat.</p>
+        </div>
+        <div class="trust-pillar">
+          <div class="trust-pillar-icon">📍</div>
+          <h3>Hela Sverige</h3>
+          <p>Sök på stad, filtrera på län eller bläddra på kartan. Vi täcker alla 21 län.</p>
+        </div>
+        <div class="trust-pillar">
+          <div class="trust-pillar-icon">🆓</div>
+          <h3>Gratis &amp; öppet</h3>
+          <p>Ingen registrering, inga avgifter. Hitta rätt verksamhet på sekunder och kontakta direkt.</p>
+        </div>
+        <div class="trust-pillar">
+          <div class="trust-pillar-icon">🗺️</div>
+          <h3>Interaktiv karta</h3>
+          <p>Se alla verksamheter på kartan med färgkodade markörer per kategori. Klicka för detaljer.</p>
+        </div>
+      </div>
+
+      <div class="trust-stats-bar">
+        <div class="trust-stat-item">
+          <strong>355 000</strong>
+          <span>hästar i Sverige</span>
+        </div>
+        <div class="trust-stat-divider"></div>
+        <div class="trust-stat-item">
+          <strong>715+</strong>
+          <span>verksamheter kartlagda</span>
+        </div>
+        <div class="trust-stat-divider"></div>
+        <div class="trust-stat-item">
+          <strong>6</strong>
+          <span>kategorier</span>
+        </div>
+        <div class="trust-stat-divider"></div>
+        <div class="trust-stat-item">
+          <strong>21</strong>
+          <span>län i hela landet</span>
+        </div>
+        <div class="trust-stat-divider"></div>
+        <div class="trust-stat-item">
+          <strong>93%</strong>
+          <span>av ryttarna är kvinnor</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Cards Section -->
+  <section id="kategorier" class="categories-section">
+    <div class="container">
+      <div class="section-header centered">
+        <h2>Utforska Kategorier</h2>
+        <p>Bläddra bland hästverksamheter sorterade efter typ</p>
+      </div>
+      <div class="category-cards">
+        <a href="#search" class="category-card" data-category="ridskolor" onclick="setCategory('ridskolor')">
+          <div class="category-card-icon" style="background: rgba(196,96,122,0.12); color: #C4607A;">🏇</div>
+          <h3>Ridskolor</h3>
+          <p>Ridlektioner, ryttarkurser och ponnyridning</p>
+          <span class="category-card-arrow">Visa alla →</span>
+        </a>
+        <a href="#search" class="category-card" data-category="turridning" onclick="setCategory('turridning')">
+          <div class="category-card-icon" style="background: rgba(74,124,89,0.12); color: #4A7C59;">🌲</div>
+          <h3>Turridning & Ridturer</h3>
+          <p>Skogsridning, fjällridning och naturupplevelser</p>
+          <span class="category-card-arrow">Visa alla →</span>
+        </a>
+        <a href="#search" class="category-card" data-category="hastkalas" onclick="setCategory('hastkalas')">
+          <div class="category-card-icon" style="background: rgba(155,89,182,0.12); color: #9B59B6;">🎉</div>
+          <h3>Hästkalas & Ponnykalas</h3>
+          <p>Barnkalas med hästar och ponnyridning</p>
+          <span class="category-card-arrow">Visa alla →</span>
+        </a>
+        <a href="#search" class="category-card" data-category="ridlager" onclick="setCategory('ridlager')">
+          <div class="category-card-icon" style="background: rgba(230,126,34,0.12); color: #E67E22;">⛺</div>
+          <h3>Ridläger & Sommarläger</h3>
+          <p>Ridläger för barn, ungdomar och vuxna</p>
+          <span class="category-card-arrow">Visa alla →</span>
+        </a>
+        <a href="#search" class="category-card" data-category="hastpensionat" onclick="setCategory('hastpensionat')">
+          <div class="category-card-icon" style="background: rgba(52,152,219,0.12); color: #3498DB;">🏠</div>
+          <h3>Hästpensionat & Hästhotell</h3>
+          <p>Inackordering, uppstallning och tillfälligt boende</p>
+          <span class="category-card-arrow">Visa alla →</span>
+        </a>
+        <a href="#search" class="category-card" data-category="hovslagare" onclick="setCategory('hovslagare')">
+          <div class="category-card-icon" style="background: rgba(201,150,60,0.12); color: #C9963C;">🔨</div>
+          <h3>Hovslagare</h3>
+          <p>Hovvård, skoning och hovbeslag</p>
+          <span class="category-card-arrow">Visa alla →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full-width Leaflet Map -->
+  <section class="fullmap-section">
+    <div class="container">
+      <div class="section-header centered">
+        <h2>Verksamheter på Kartan</h2>
+        <p>Färgkodade markörer per kategori — klicka för att se detaljer.</p>
+      </div>
+    </div>
+    <div class="fullmap-wrap">
+      <div id="leaflet-map"></div>
+    </div>
+    <div id="map-tooltip" role="tooltip"></div>
+  </section>
+
+  <!-- Search & Directory Table -->
+  <div class="container">
+    <section id="search" class="search-section">
+      <div class="section-header centered">
+        <h2>Sök bland alla Verksamheter</h2>
+        <p>Filtrera på kategori, stad eller län</p>
+      </div>
+      <div class="search-controls">
+        <div class="search-input-wrap">
+          <span class="search-icon">🔍</span>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Sök namn, stad, kategori..."
+            aria-label="Sök verksamhet"
+            autocomplete="off"
+          >
+        </div>
+        <select id="category-filter" aria-label="Filtrera på kategori">
+          <option value="">🗂️ Alla Kategorier</option>
+        </select>
+        <select id="county-filter" aria-label="Filtrera på län">
+          <option value="">📍 Alla Län</option>
+        </select>
+      </div>
+      <p id="result-count" class="result-count"></p>
+      <div class="table-wrapper">
+        <table class="directory-table" role="grid">
+          <thead>
+            <tr>
+              <th data-col="0">Namn <span class="sort-icon" aria-hidden="true">⇅</span></th>
+              <th data-col="1">Kategori <span class="sort-icon" aria-hidden="true">⇅</span></th>
+              <th data-col="2">Län <span class="sort-icon" aria-hidden="true">⇅</span></th>
+              <th data-col="3">Stad <span class="sort-icon" aria-hidden="true">⇅</span></th>
+              <th data-col="4">Telefon <span class="sort-icon" aria-hidden="true">⇅</span></th>
+              <th data-col="5">Webbplats <span class="sort-icon" aria-hidden="true">⇅</span></th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <tr>
+              <td colspan="6" style="text-align:center;padding:3rem;color:#9E8090;">Laddar verksamheter... 🐴</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="pagination"></div>
+    </section>
+  </div>
+
+  <!-- Regions / County Cards -->
+  <section id="regioner" class="regions-section">
+    <div class="container">
+      <div class="section-header centered">
+        <h2>Verksamheter per Län</h2>
+        <p>Välj ditt län för en komplett lista med hästverksamheter, karta och kontaktinfo.</p>
+      </div>
+      <div class="county-cards">
+
+        <a href="regions/stockholm.html" class="county-card">
+          <div class="county-card-icon">🐎</div>
+          <h3>Stockholms län</h3>
+          <p>Hästverksamheter i Stockholm</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/uppsala.html" class="county-card">
+          <div class="county-card-icon">🐴</div>
+          <h3>Uppsala län</h3>
+          <p>Hästverksamheter i Uppsala</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/sodermanland.html" class="county-card">
+          <div class="county-card-icon">🏇</div>
+          <h3>Södermanlands län</h3>
+          <p>Hästverksamheter i Södermanland</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/ostergotland.html" class="county-card">
+          <div class="county-card-icon">🦄</div>
+          <h3>Östergötlands län</h3>
+          <p>Hästverksamheter i Östergötland</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/jonkoping.html" class="county-card">
+          <div class="county-card-icon">🐎</div>
+          <h3>Jönköpings län</h3>
+          <p>Hästverksamheter i Jönköping</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/kronoberg.html" class="county-card">
+          <div class="county-card-icon">🐴</div>
+          <h3>Kronobergs län</h3>
+          <p>Hästverksamheter i Kronoberg</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/kalmar.html" class="county-card">
+          <div class="county-card-icon">🏇</div>
+          <h3>Kalmars län</h3>
+          <p>Hästverksamheter i Kalmar</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/gotland.html" class="county-card">
+          <div class="county-card-icon">🦄</div>
+          <h3>Gotlands län</h3>
+          <p>Hästverksamheter på Gotland</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/blekinge.html" class="county-card">
+          <div class="county-card-icon">🐎</div>
+          <h3>Blekinges län</h3>
+          <p>Hästverksamheter i Blekinge</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/skane.html" class="county-card">
+          <div class="county-card-icon">🐴</div>
+          <h3>Skånes län</h3>
+          <p>Hästverksamheter i Skåne</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/halland.html" class="county-card">
+          <div class="county-card-icon">🏇</div>
+          <h3>Hallands län</h3>
+          <p>Hästverksamheter i Halland</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/vastra-gotaland.html" class="county-card">
+          <div class="county-card-icon">🦄</div>
+          <h3>Västra Götalands län</h3>
+          <p>Hästverksamheter i Västra Götaland</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/varmland.html" class="county-card">
+          <div class="county-card-icon">🐎</div>
+          <h3>Värmlands län</h3>
+          <p>Hästverksamheter i Värmland</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/orebro.html" class="county-card">
+          <div class="county-card-icon">🐴</div>
+          <h3>Örebros län</h3>
+          <p>Hästverksamheter i Örebro</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/vastmanland.html" class="county-card">
+          <div class="county-card-icon">🏇</div>
+          <h3>Västmanlands län</h3>
+          <p>Hästverksamheter i Västmanland</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/dalarna.html" class="county-card">
+          <div class="county-card-icon">🦄</div>
+          <h3>Dalarnas län</h3>
+          <p>Hästverksamheter i Dalarna</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/gavleborg.html" class="county-card">
+          <div class="county-card-icon">🐎</div>
+          <h3>Gävleborgs län</h3>
+          <p>Hästverksamheter i Gävleborg</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/vasternorrland.html" class="county-card">
+          <div class="county-card-icon">🐴</div>
+          <h3>Västernorrlands län</h3>
+          <p>Hästverksamheter i Västernorrland</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/jamtland.html" class="county-card">
+          <div class="county-card-icon">🏇</div>
+          <h3>Jämtlands län</h3>
+          <p>Hästverksamheter i Jämtland</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/vasterbotten.html" class="county-card">
+          <div class="county-card-icon">🦄</div>
+          <h3>Västerbottens län</h3>
+          <p>Hästverksamheter i Västerbotten</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+        <a href="regions/norrbotten.html" class="county-card">
+          <div class="county-card-icon">🐎</div>
+          <h3>Norrbottens län</h3>
+          <p>Hästverksamheter i Norrbotten</p>
+          <span class="county-card-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Teaser Section -->
+  <section class="blog-teaser">
+    <div class="container">
+      <div class="section-header centered">
+        <h2>Tips &amp; Råd om Ridning</h2>
+        <p>Från nybörjare till tävlingsryttare — vi har guider för alla.</p>
+      </div>
+      <div class="blog-teaser-grid">
+        <a href="blogg/vad-ska-du-ha-pa-dig.html" class="blog-mini-card">
+          <span class="blog-mini-icon">👗</span>
+          <h3>Utrustning för nybörjare</h3>
+          <p>Hjälm, stövlar, ridbyxor — vad behöver du egentligen?</p>
+        </a>
+        <a href="blogg/hast-evenemang-2026.html" class="blog-mini-card">
+          <span class="blog-mini-icon">🏆</span>
+          <h3>Hästevenemang 2026</h3>
+          <p>Falsterbo, Jönköping, Stockholm — alla datum samlade.</p>
+        </a>
+        <a href="blogg/ryttarmarken.html" class="blog-mini-card">
+          <span class="blog-mini-icon">🏅</span>
+          <h3>Ryttarmärken förklarade</h3>
+          <p>De 8 nivåerna från vitt märke till guld.</p>
+        </a>
+        <a href="blogg/hitta-ridskola.html" class="blog-mini-card">
+          <span class="blog-mini-icon">🗺️</span>
+          <h3>Hur hittar du rätt ridskola?</h3>
+          <p>Vad ska du tänka på? Vi listar det viktigaste.</p>
+        </a>
+      </div>
+      <div style="text-align:center;margin-top:2rem">
+        <a href="blogg/index.html" class="btn btn-outline-rose">Se alla artiklar →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-logo">🐴 HästSverige</div>
+        <p class="footer-tagline">Sveriges kompletta hästportal.<br>Ridskolor, turridning, hästkalas och mer.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Snabblänkar</h4>
+        <ul>
+          <li><a href="index.html">Startsida</a></li>
+          <li><a href="#search">Sök Verksamhet</a></li>
+          <li><a href="blogg/index.html">Blogg</a></li>
+          <li><a href="#regioner">Alla Län</a></li>
+          <li><a href="annonsera.html">Annonsera</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Populära Län</h4>
+        <ul>
+          <li><a href="regions/stockholm.html">Stockholm</a></li>
+          <li><a href="regions/vastra-gotaland.html">Västra Götaland</a></li>
+          <li><a href="regions/skane.html">Skåne</a></li>
+          <li><a href="regions/dalarna.html">Dalarna</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 HästSverige &mdash; Sveriges kompletta hästportal.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Category card click handler -->
+  <script>
+    function setCategory(cat) {
+      var sel = document.getElementById('category-filter');
+      if (sel) {
+        sel.value = cat;
+        sel.dispatchEvent(new Event('change'));
+      }
+    }
+  </script>
+
+</body>
+</html>

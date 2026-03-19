@@ -1,0 +1,2061 @@
+/* ============================================================
+   Ridskolor i Sverige — Main Stylesheet
+   Feminine, modern equestrian brand. Rose · Green · Gold.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ============================================================
+   Design Tokens
+   ============================================================ */
+:root {
+  /* Rose palette */
+  --rose:        #C4607A;
+  --rose-dark:   #8B3A52;
+  --rose-mid:    #A84A64;
+  --rose-light:  #F0C4CE;
+  --rose-pale:   #FDF0F3;
+
+  /* Green — stables, nature */
+  --green:       #4A7C59;
+  --green-dark:  #2E5240;
+  --green-light: #C2D9C8;
+
+  /* Gold — trophies, premium */
+  --gold:        #C9963C;
+  --gold-light:  #EDD98A;
+
+  /* Neutrals */
+  --cream:       #FDF7F2;
+  --white:       #FFFFFF;
+  --text:        #2A1820;
+  --text-mid:    #6B4A58;
+  --text-light:  #9E8090;
+  --border:      #EDD8E0;
+
+  /* Shadows */
+  --shadow-sm:   0 1px 4px rgba(160, 60, 90, 0.08);
+  --shadow:      0 4px 16px rgba(160, 60, 90, 0.12);
+  --shadow-lg:   0 8px 32px rgba(160, 60, 90, 0.18);
+}
+
+/* ============================================================
+   Reset & Base
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.65;
+  min-height: 100vh;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--rose);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--rose-dark);
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ============================================================
+   Utility
+   ============================================================ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+/* ============================================================
+   Navigation
+   ============================================================ */
+#main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 var(--border), 0 2px 16px rgba(160, 60, 90, 0.07);
+  transition: box-shadow 0.3s ease;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.9rem 24px;
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--rose-dark);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+}
+
+.nav-logo:hover {
+  color: var(--rose);
+  text-decoration: none;
+}
+
+.logo-horse {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-mid);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--rose);
+  text-decoration: none;
+  border-bottom-color: var(--rose-light);
+}
+
+.nav-links a.active {
+  color: var(--rose-dark);
+  border-bottom-color: var(--green);
+}
+
+/* "Annonsera" CTA-knapp i nav */
+.nav-links a.nav-cta {
+  background: var(--rose);
+  color: var(--white) !important;
+  border: none;
+  border-radius: 50px;
+  padding: 0.3rem 1rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.nav-links a.nav-cta:hover {
+  background: var(--rose-dark);
+  text-decoration: none;
+  border-bottom-color: transparent;
+}
+
+/* Hamburger */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.nav-hamburger:hover {
+  background: var(--rose-pale);
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--rose-dark);
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav-hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ============================================================
+   Hero
+   ============================================================ */
+.hero {
+  position: relative;
+  padding: 110px 24px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #8B3A52 0%, #C4607A 50%, #D4748A 100%);
+  color: var(--white);
+  overflow: hidden;
+}
+
+/* Subtle horseshoe-like repeating pattern overlay */
+.hero-bg-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 8 C18 8 10 16 10 26 C10 36 16 42 22 44 L22 48 L38 48 L38 44 C44 42 50 36 50 26 C50 16 42 8 30 8 Z M30 12 C40 12 46 18 46 26 C46 34 40 40 34 42 L34 44 L26 44 L26 42 C20 40 14 34 14 26 C14 18 20 12 30 12 Z' fill='white' fill-opacity='0.05'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 5rem;
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 0.3rem 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.18;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+/* Gold decorative underline below h1 */
+.hero-divider {
+  width: 80px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0 auto 1.4rem;
+  border-radius: 2px;
+}
+
+.hero-sub {
+  font-size: 1.08rem;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 580px;
+  margin: 0 auto 2.2rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* Glassmorphism stat cards */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 2.2rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+  transition: background 0.25s ease, transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-card:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: translateY(-2px);
+}
+
+.stat-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+  display: block;
+}
+
+.stat-lbl {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 0.3rem;
+  display: block;
+  white-space: nowrap;
+}
+
+/* Hero buttons */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.btn:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/* White bg + rose text (for on-hero use) */
+.btn-primary-inv {
+  background: var(--white);
+  color: var(--rose-dark);
+  border-color: var(--white);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary-inv:hover {
+  background: var(--rose-pale);
+  color: var(--rose-dark);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Transparent + white border (for on-hero use) */
+.btn-outline-inv {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-outline-inv:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  border-color: var(--white);
+}
+
+/* Rose outline (for on-page use) */
+.btn-outline-rose {
+  background: transparent;
+  color: var(--rose-dark);
+  border-color: var(--rose);
+}
+
+.btn-outline-rose:hover {
+  background: var(--rose-pale);
+  color: var(--rose-dark);
+}
+
+/* Solid rose */
+.btn-rose {
+  background: linear-gradient(135deg, var(--rose-mid), var(--rose-dark));
+  color: var(--white);
+  border-color: transparent;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-rose:hover {
+  box-shadow: var(--shadow);
+  filter: brightness(1.05);
+}
+
+/* ============================================================
+   Hero Wave Divider
+   ============================================================ */
+.hero-wave {
+  position: relative;
+  z-index: 2;
+  margin-bottom: -2px;
+  line-height: 0;
+}
+
+.hero-wave svg {
+  display: block;
+  width: 100%;
+  height: 70px;
+}
+
+/* ============================================================
+   Section Headers
+   ============================================================ */
+.section-header {
+  margin-bottom: 2.5rem;
+}
+
+.section-header.centered {
+  text-align: center;
+}
+
+.section-header h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--rose-dark);
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+.section-header.centered h2::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header p {
+  color: var(--text-mid);
+  font-size: 1.05rem;
+  margin-top: 0.75rem;
+  max-width: 600px;
+}
+
+.section-header.centered p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================================
+   Map Section
+   ============================================================ */
+.map-section-wrap {
+  padding: 4rem 0;
+}
+
+.map-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+/* SVG Map Card */
+.map-card {
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.map-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-mid);
+}
+
+.map-reset-btn {
+  background: var(--rose-pale);
+  color: var(--rose-dark);
+  border: 1px solid var(--rose-light);
+  border-radius: 50px;
+  padding: 0.25rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.map-reset-btn:hover {
+  background: var(--rose-light);
+  color: var(--rose-dark);
+}
+
+#svg-map {
+  width: 100%;
+  display: block;
+  padding: 0.5rem;
+}
+
+#svg-map path {
+  fill: #E8F5ED;
+  stroke: var(--white);
+  stroke-width: 1.5;
+  cursor: pointer;
+  transition: fill 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#svg-map path:hover {
+  fill: var(--rose-light);
+}
+
+#svg-map path.active {
+  fill: var(--rose);
+}
+
+#svg-map text {
+  font-size: 8px;
+  fill: var(--text-mid);
+  pointer-events: none;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+#svg-map path.active + text,
+#svg-map text.active-label {
+  fill: var(--white);
+}
+
+.map-caption {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  padding: 0.6rem 1rem 0.9rem;
+  font-style: italic;
+}
+
+/* Map Tooltip */
+#map-tooltip {
+  position: fixed;
+  background: var(--rose-dark);
+  color: var(--white);
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  z-index: 9999;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(139, 58, 82, 0.3);
+}
+
+/* Leaflet Map Panel */
+.leaflet-card {
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+#leaflet-map {
+  height: 420px;
+  display: block;
+  width: 100%;
+}
+
+/* ============================================================
+   Trust Section
+   ============================================================ */
+.trust-section {
+  background: var(--white);
+  padding: 5rem 0 4rem;
+}
+
+.trust-intro {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+}
+
+.trust-eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rose);
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 2px;
+  margin-bottom: 1rem;
+}
+
+.trust-intro h2 {
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  margin-bottom: 1rem;
+}
+
+.trust-lead {
+  color: var(--text-mid);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.trust-pillars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 3.5rem;
+}
+
+.trust-pillar {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trust-pillar:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.trust-pillar-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.9rem;
+  line-height: 1;
+}
+
+.trust-pillar h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  color: var(--rose-dark);
+}
+
+.trust-pillar p {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+.trust-stats-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: linear-gradient(135deg, #8B3A52 0%, #C4607A 100%);
+  border-radius: 20px;
+  padding: 2rem 3rem;
+  flex-wrap: wrap;
+}
+
+.trust-stat-item {
+  text-align: center;
+  padding: 0.5rem 2.5rem;
+  flex: 1;
+  min-width: 130px;
+}
+
+.trust-stat-item strong {
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  line-height: 1.1;
+}
+
+.trust-stat-item span {
+  display: block;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 0.2rem;
+  letter-spacing: 0.02em;
+}
+
+.trust-stat-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   How It Works Section
+   ============================================================ */
+.how-section {
+  background: var(--cream);
+  padding: 4.5rem 0;
+}
+
+.how-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.how-step {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  max-width: 280px;
+  position: relative;
+}
+
+.how-step-num {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 28px;
+  background: var(--rose);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.how-step-icon {
+  font-size: 2.4rem;
+  margin-bottom: 0.75rem;
+  margin-top: 0.5rem;
+  line-height: 1;
+}
+
+.how-step h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--rose-dark);
+}
+
+.how-step p {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height: 1.55;
+}
+
+.how-step-arrow {
+  font-size: 1.75rem;
+  color: var(--rose-light);
+  padding: 0 1.25rem;
+  flex-shrink: 0;
+  margin-top: 1rem;
+}
+
+/* ============================================================
+   Full-width Map Section
+   ============================================================ */
+.fullmap-section {
+  background: var(--white);
+  padding: 4rem 0 0;
+}
+
+.fullmap-wrap {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.fullmap-wrap #leaflet-map {
+  height: 480px;
+  width: 100%;
+  display: block;
+}
+
+/* ============================================================
+   Search Section
+   ============================================================ */
+.search-section {
+  padding: 3rem 0 4rem;
+}
+
+.search-controls {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Search input wrapper for magnifying glass prefix */
+.search-input-wrap {
+  position: relative;
+  flex: 2;
+  min-width: 260px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#search-input {
+  width: 100%;
+  padding: 0.72rem 1rem 0.72rem 2.8rem;
+  border: 1.5px solid var(--border);
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: var(--white);
+  color: var(--text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  appearance: none;
+}
+
+#search-input::placeholder {
+  color: var(--text-light);
+}
+
+#search-input:focus {
+  outline: none;
+  border-color: var(--rose);
+  box-shadow: 0 0 0 3px rgba(196, 96, 122, 0.15);
+}
+
+#county-filter,
+#category-filter {
+  flex: 1;
+  min-width: 180px;
+  padding: 0.72rem 1.2rem;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: var(--white);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239E8090' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+#county-filter:focus,
+#category-filter:focus {
+  outline: none;
+  border-color: var(--rose);
+  box-shadow: 0 0 0 3px rgba(196, 96, 122, 0.15);
+}
+
+.result-count {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* ============================================================
+   Directory Table
+   ============================================================ */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.directory-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.directory-table thead tr {
+  background: linear-gradient(135deg, var(--rose-dark), var(--rose));
+}
+
+.directory-table th {
+  color: var(--white);
+  padding: 0.9rem 1.1rem;
+  text-align: left;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 600;
+  font-size: 0.87rem;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+.directory-table th:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.directory-table td {
+  padding: 0.8rem 1.1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  vertical-align: middle;
+  color: var(--text);
+}
+
+.directory-table tr:last-child td {
+  border-bottom: none;
+}
+
+.directory-table tbody tr:hover td {
+  background: var(--rose-pale);
+}
+
+/* Featured & Premium rows */
+.directory-table .row-featured td {
+  background: #FFFEF0;
+  border-left: 3px solid #F0C040;
+}
+
+.directory-table .row-featured td:first-child {
+  border-left: 3px solid #F0C040;
+}
+
+.directory-table .row-premium td {
+  background: #FFF9EE;
+  border-left: 3px solid var(--gold);
+}
+
+.directory-table .row-featured:hover td {
+  background: #FFFCE0;
+}
+
+.directory-table .row-premium:hover td {
+  background: #FFF3D0;
+}
+
+.tier-badge {
+  display: inline-block;
+  font-size: 0.85rem;
+  line-height: 1;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+.directory-table a {
+  color: var(--rose);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.directory-table a:hover {
+  color: var(--rose-dark);
+  text-decoration: underline;
+}
+
+.sort-icon {
+  margin-left: 0.3rem;
+  opacity: 0.6;
+  font-style: normal;
+  font-size: 0.75rem;
+}
+
+th[aria-sort] .sort-icon {
+  opacity: 1;
+}
+
+/* Tags */
+.tag {
+  display: inline-block;
+  background: var(--rose-pale);
+  color: var(--rose-dark);
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  margin: 2px;
+  white-space: nowrap;
+  border: 1px solid var(--rose-light);
+  transition: background 0.2s ease;
+}
+
+.tag:hover {
+  background: var(--rose-light);
+}
+
+/* Empty state */
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-light);
+  font-size: 1.05rem;
+}
+
+.no-results span {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+/* ============================================================
+   Pagination
+   ============================================================ */
+#pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+#pagination button,
+.pagination button {
+  padding: 0.45rem 0.9rem;
+  border: 1.5px solid var(--border);
+  background: var(--white);
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-family: inherit;
+  font-weight: 500;
+  color: var(--text-mid);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 38px;
+}
+
+#pagination button.active,
+.pagination button.active {
+  background: linear-gradient(135deg, var(--rose-mid), var(--rose-dark));
+  color: var(--white);
+  border-color: transparent;
+  box-shadow: var(--shadow-sm);
+}
+
+#pagination button:hover:not(.active),
+.pagination button:hover:not(.active) {
+  background: var(--rose-pale);
+  border-color: var(--rose-light);
+  color: var(--rose-dark);
+}
+
+/* ============================================================
+   County Cards (Regions Grid)
+   ============================================================ */
+.regions-section {
+  padding: 4rem 0;
+  background: var(--white);
+}
+
+.county-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 1.1rem;
+  margin: 2rem 0 0;
+}
+
+.county-card {
+  background: var(--white);
+  border-radius: 16px;
+  border: 2px solid var(--border);
+  padding: 1.4rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.county-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--rose-pale), transparent);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  border-radius: 14px;
+}
+
+.county-card:hover {
+  border-color: var(--rose);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  text-decoration: none;
+  color: var(--text);
+}
+
+.county-card:hover::before {
+  opacity: 1;
+}
+
+.county-card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.county-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--rose-dark);
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+  position: relative;
+  z-index: 1;
+}
+
+.county-card p {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  position: relative;
+  z-index: 1;
+  margin-top: 0.2rem;
+}
+
+.county-card-arrow {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--rose);
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.2s ease;
+}
+
+.county-card:hover .county-card-arrow {
+  transform: translateX(4px);
+}
+
+/* ============================================================
+   Category Cards Section
+   ============================================================ */
+.categories-section {
+  padding: 4rem 0;
+  background: var(--cream);
+}
+
+.category-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.category-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--rose-light);
+  text-decoration: none;
+  color: var(--text);
+}
+
+.category-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.category-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--rose-dark);
+  margin-bottom: 0.4rem;
+  line-height: 1.35;
+}
+
+.category-card p {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height: 1.55;
+  margin-bottom: 0.75rem;
+}
+
+.category-card-arrow {
+  font-size: 0.85rem;
+  color: var(--rose);
+  font-weight: 600;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.category-card:hover .category-card-arrow {
+  transform: translateX(4px);
+}
+
+/* Category tag in table */
+.cat-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  white-space: nowrap;
+  background: color-mix(in srgb, var(--cat-color, #888) 12%, white);
+  color: var(--cat-color, #888);
+  border: 1px solid color-mix(in srgb, var(--cat-color, #888) 25%, white);
+}
+
+/* Fallback for browsers without color-mix */
+@supports not (background: color-mix(in srgb, red 50%, white)) {
+  .cat-tag {
+    background: var(--rose-pale);
+    color: var(--rose-dark);
+    border-color: var(--rose-light);
+  }
+}
+
+/* ============================================================
+   Blog Teaser Section
+   ============================================================ */
+.blog-teaser {
+  padding: 4rem 0;
+  background: var(--cream);
+}
+
+.blog-teaser-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.blog-mini-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+}
+
+.blog-mini-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--rose-light);
+  text-decoration: none;
+  color: var(--text);
+}
+
+.blog-mini-icon {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.blog-mini-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--rose-dark);
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+
+.blog-mini-card p {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height: 1.55;
+}
+
+/* ============================================================
+   Blog Grid (blogg/index.html)
+   ============================================================ */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.blog-card {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  text-decoration: none;
+  color: var(--text);
+}
+
+.blog-card-img {
+  height: 170px;
+  background: linear-gradient(135deg, var(--rose-mid) 0%, var(--rose-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+.blog-card-body {
+  padding: 1.4rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--rose-dark);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.blog-card p {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  flex: 1;
+  line-height: 1.6;
+}
+
+.blog-card-meta {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ============================================================
+   Article Content
+   ============================================================ */
+.article-content {
+  max-width: 780px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  line-height: 1.8;
+}
+
+.article-content h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.2rem;
+  color: var(--rose-dark);
+  margin-bottom: 0.6rem;
+  line-height: 1.25;
+}
+
+.article-content .article-meta {
+  color: var(--text-light);
+  font-size: 0.88rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.article-content h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  color: var(--rose-dark);
+  margin: 2.5rem 0 0.9rem;
+}
+
+.article-content h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+  color: var(--rose-mid);
+  margin: 1.8rem 0 0.6rem;
+}
+
+.article-content p {
+  margin-bottom: 1.1rem;
+  color: var(--text);
+}
+
+.article-content ul,
+.article-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.1rem;
+}
+
+.article-content ul {
+  list-style: disc;
+}
+
+.article-content ol {
+  list-style: decimal;
+}
+
+.article-content li {
+  margin-bottom: 0.45rem;
+  color: var(--text);
+}
+
+.article-content a {
+  color: var(--rose);
+  font-weight: 500;
+}
+
+.article-content a:hover {
+  color: var(--rose-dark);
+}
+
+/* ── Affiliate product recommendations ─────────────────────── */
+.product-reco {
+  background: #F0FBF4;
+  border: 1px solid #C2D9C8;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0 1.75rem;
+}
+
+.product-reco-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.product-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--white);
+  border: 1px solid #C2D9C8;
+  border-radius: 8px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.88rem;
+  color: var(--green-dark);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+.product-link:hover {
+  background: var(--green-light);
+  border-color: var(--green);
+  color: var(--green-dark);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.product-link-icon {
+  font-size: 1rem;
+}
+
+/* ── Affiliate disclosure ───────────────────────────────────── */
+.affiliate-disclosure {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  background: var(--cream);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border);
+}
+
+.article-cta {
+  background: var(--rose-pale);
+  border-left: 4px solid var(--rose-dark);
+  padding: 1.2rem 1.6rem;
+  border-radius: 0 12px 12px 0;
+  margin: 2rem 0;
+  color: var(--text-mid);
+}
+
+.article-cta strong {
+  color: var(--rose-dark);
+}
+
+.article-region-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+/* ============================================================
+   County Hero (Region Pages)
+   ============================================================ */
+.county-hero {
+  background: linear-gradient(135deg, #8B3A52 0%, #C4607A 50%, #D4748A 100%);
+  color: var(--white);
+  padding: 6rem 2rem 3.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle dot pattern overlay */
+.county-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+.county-hero h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+}
+
+.county-hero p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 600px;
+  margin: 0.5rem auto 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   County Navigation (Prev/Next)
+   ============================================================ */
+.nav-counties {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin: 2rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-counties a {
+  color: var(--rose);
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: color 0.2s ease;
+}
+
+.nav-counties a:hover {
+  color: var(--rose-dark);
+  text-decoration: none;
+}
+
+/* ============================================================
+   Breadcrumb
+   ============================================================ */
+.breadcrumb {
+  padding: 1rem 0;
+  font-size: 0.88rem;
+  color: var(--text-light);
+}
+
+.breadcrumb a {
+  color: var(--rose);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  margin: 0 0.45rem;
+  color: var(--border);
+}
+
+/* ============================================================
+   Info Box
+   ============================================================ */
+.info-box {
+  background: var(--green-light);
+  border: 1px solid var(--green);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.info-box h3 {
+  color: var(--green-dark);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+
+.info-box p {
+  color: var(--green-dark);
+  font-size: 0.92rem;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+footer {
+  background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+  color: rgba(255, 255, 255, 0.88);
+  margin-top: 2rem;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5rem 24px 2.5rem;
+}
+
+.footer-logo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.footer-tagline {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.65;
+  margin-top: 0.5rem;
+}
+
+.footer-col h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 1.1rem;
+}
+
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.footer-col ul li a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-col ul li a:hover {
+  color: var(--gold-light);
+  text-decoration: none;
+}
+
+footer a {
+  color: var(--gold-light);
+}
+
+footer a:hover {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 1.25rem 24px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-bottom p {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ============================================================
+   Animations
+   ============================================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Cards transition */
+.county-card,
+.blog-card,
+.blog-mini-card,
+.stat-card {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================================
+   Responsive — 768px
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Nav */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    padding: 1.2rem 1.5rem;
+    gap: 1rem;
+    box-shadow: 0 8px 24px rgba(160, 60, 90, 0.12);
+    border-top: 1px solid var(--border);
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-hamburger {
+    display: flex;
+  }
+
+  #main-nav {
+    position: relative;
+  }
+
+  .nav-inner {
+    position: relative;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 80px 20px 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.9rem, 7vw, 2.5rem);
+  }
+
+  .hero-stats {
+    gap: 0.75rem;
+  }
+
+  .stat-card {
+    padding: 0.75rem 1rem;
+    min-width: 85px;
+  }
+
+  .stat-num {
+    font-size: 1.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Trust section */
+  .trust-pillars {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .trust-stats-bar {
+    padding: 1.5rem 1.25rem;
+    gap: 1rem;
+  }
+
+  .trust-stat-divider {
+    display: none;
+  }
+
+  .trust-stat-item {
+    padding: 0.5rem 1rem;
+    min-width: 110px;
+  }
+
+  /* How it works */
+  .how-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .how-step {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .how-step-arrow {
+    transform: rotate(90deg);
+    padding: 0;
+  }
+
+  /* Leaflet */
+  .fullmap-wrap #leaflet-map {
+    height: 340px;
+  }
+
+  /* Search */
+  .search-controls {
+    flex-direction: column;
+  }
+
+  .search-input-wrap {
+    width: 100%;
+    flex: none;
+  }
+
+  #county-filter,
+  #category-filter {
+    width: 100%;
+    flex: none;
+  }
+
+  /* Table */
+  .directory-table th,
+  .directory-table td {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  /* Cards */
+  .county-cards {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  /* Category cards */
+  .category-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Blog */
+  .blog-teaser-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Article */
+  .article-content {
+    padding: 1.75rem;
+  }
+
+  .article-content h1 {
+    font-size: 1.75rem;
+  }
+
+  /* County hero */
+  .county-hero h1 {
+    font-size: 1.9rem;
+  }
+
+  /* Nav counties */
+  .nav-counties {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  /* Footer */
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem 24px 2rem;
+  }
+
+  /* Section header */
+  .section-header h2 {
+    font-size: 1.65rem;
+  }
+}
+
+/* ============================================================
+   Responsive — 480px
+   ============================================================ */
+@media (max-width: 480px) {
+  .trust-pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .county-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.72rem;
+  }
+
+  .stat-num {
+    font-size: 1.35rem;
+  }
+
+  .stat-lbl {
+    font-size: 0.72rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .article-content {
+    padding: 1.2rem;
+  }
+
+  .blog-teaser-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .county-hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .footer-inner {
+    padding: 2rem 16px 1.5rem;
+  }
+}
