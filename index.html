@@ -237,16 +237,24 @@
     </div>
   </section>
 
-  <!-- Full-width Leaflet Map -->
-  <section class="fullmap-section">
+  <!-- Leaflet Map -->
+  <section class="map-section">
     <div class="container">
-      <div class="section-header centered">
-        <h2>Verksamheter på Kartan</h2>
-        <p>Färgkodade markörer per kategori — klicka för att se detaljer.</p>
+      <div class="map-header">
+        <h2>Utforska kartan</h2>
+        <div class="map-category-btns" id="map-category-btns">
+          <button class="map-cat-btn active" data-cat="">Alla</button>
+          <button class="map-cat-btn" data-cat="ridskolor" style="--cat-c:#C4607A;">🏇 Ridskolor</button>
+          <button class="map-cat-btn" data-cat="turridning" style="--cat-c:#4A7C59;">🌲 Turridning</button>
+          <button class="map-cat-btn" data-cat="hastkalas" style="--cat-c:#9B59B6;">🎉 Hästkalas</button>
+          <button class="map-cat-btn" data-cat="ridlager" style="--cat-c:#E67E22;">⛺ Ridläger</button>
+          <button class="map-cat-btn" data-cat="hastpensionat" style="--cat-c:#3498DB;">🏠 Pensionat</button>
+          <button class="map-cat-btn" data-cat="hovslagare" style="--cat-c:#C9963C;">🔨 Hovslagare</button>
+        </div>
       </div>
-    </div>
-    <div class="fullmap-wrap">
-      <div id="leaflet-map"></div>
+      <div class="map-container">
+        <div id="leaflet-map"></div>
+      </div>
     </div>
     <div id="map-tooltip" role="tooltip"></div>
   </section>

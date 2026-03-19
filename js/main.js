@@ -456,6 +456,16 @@
         navLinks.classList.toggle('open');
       });
     }
+
+    // Map category buttons
+    var mapBtns = document.querySelectorAll('.map-cat-btn');
+    mapBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        mapBtns.forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        updateLeafletMarkers();
+      });
+    });
   }
 
   /* ============================================================
@@ -588,10 +598,15 @@
     var selectedCounty = countyFilter ? countyFilter.value : '';
     var selectedCategory = categoryFilter ? categoryFilter.value : '';
 
+    // Also check map category buttons
+    var activeMapBtn = document.querySelector('.map-cat-btn.active');
+    var mapCategory = activeMapBtn ? activeMapBtn.getAttribute('data-cat') : '';
+
     leafletMarkers.forEach(function (marker) {
       var show = true;
       if (selectedCounty && marker.entry.county !== selectedCounty) show = false;
       if (selectedCategory && marker.entry.category !== selectedCategory) show = false;
+      if (mapCategory && marker.entry.category !== mapCategory) show = false;
 
       if (show) {
         if (!leafletMap.hasLayer(marker)) marker.addTo(leafletMap);
@@ -601,7 +616,7 @@
     });
 
     // Fit bounds to visible markers
-    if (selectedCounty || selectedCategory) {
+    if (selectedCounty || selectedCategory || mapCategory) {
       var visible = leafletMarkers.filter(function (m) {
         return leafletMap.hasLayer(m);
       });

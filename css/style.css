@@ -843,20 +843,79 @@ section {
 }
 
 /* ============================================================
-   Full-width Map Section
+   Map Section (contained)
    ============================================================ */
-.fullmap-section {
+.map-section {
   background: var(--white);
-  padding: 4rem 0 0;
+  padding: 4rem 0;
 }
 
-.fullmap-wrap {
-  margin-top: 2rem;
-  width: 100%;
+.map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-.fullmap-wrap #leaflet-map {
-  height: 480px;
+.map-header h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--rose-dark);
+  margin: 0;
+}
+
+/* Category filter buttons above map */
+.map-category-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.map-cat-btn {
+  padding: 0.3rem 0.75rem;
+  border: 1.5px solid var(--border);
+  border-radius: 50px;
+  background: var(--white);
+  color: var(--text-mid);
+  font-size: 0.8rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.map-cat-btn:hover {
+  border-color: var(--cat-c, var(--rose));
+  color: var(--cat-c, var(--rose-dark));
+  background: color-mix(in srgb, var(--cat-c, var(--rose)) 8%, white);
+}
+
+.map-cat-btn.active {
+  background: var(--cat-c, var(--rose));
+  color: var(--white);
+  border-color: var(--cat-c, var(--rose));
+}
+
+@supports not (background: color-mix(in srgb, red 50%, white)) {
+  .map-cat-btn:hover {
+    background: var(--rose-pale);
+  }
+}
+
+/* Map container with rounded corners */
+.map-container {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.map-container #leaflet-map {
+  height: 460px;
   width: 100%;
   display: block;
 }
@@ -1930,9 +1989,14 @@ footer a:hover {
     padding: 0;
   }
 
-  /* Leaflet */
-  .fullmap-wrap #leaflet-map {
-    height: 340px;
+  /* Map */
+  .map-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .map-container #leaflet-map {
+    height: 320px;
   }
 
   /* Search */
